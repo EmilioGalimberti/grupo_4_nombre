@@ -17,4 +17,4 @@ Sitios de referencia:
     - https://www.lamartina.com.ar,
 
 Sprint 2:
-Tablero de Trabajo: https://trello.com/b/z1coJYmg/projecto-integrado-dh 
+Tablero de Trabajo: https://trello.com/b/z1coJYmg/projecto-integrado-dh
