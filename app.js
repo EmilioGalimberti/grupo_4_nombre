@@ -9,7 +9,10 @@ app.listen(3050, () => {
     console.log("Servidor corriendo");
   });
 
-  
+app.get("/", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./src/views/index.html"));
+});
+
 app.get("/productCart", (req, res) => {
     res.sendFile(path.resolve(__dirname, "./src/views/productCart.html"));
-  });
+});
