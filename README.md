@@ -3,7 +3,6 @@
 Construiremos un sitio web de E-commerce que ofrecera indumentaria para adultos, sin importar el g<énero.
 
 Integrantes:
-    -Cortez Marino Agustina,
     -Galimberti Andres Emilio,
     -Neyra Juan José,
     -Oliveros Pagotto Lucas.
