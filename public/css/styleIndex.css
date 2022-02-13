@@ -5,8 +5,8 @@ h2{
     margin: 0%;
 }
 body{
-    height: 100%;
     margin: 0px;
+    background-color: rgb(46, 46, 46);
 }
 
 header {
@@ -15,6 +15,7 @@ header {
     border-bottom: solid 1px gray;
     display: flex;
     padding-bottom: 2px;
+    position: static;
 }
 
 #logo {
@@ -33,24 +34,17 @@ main{
 
 .sector-categorias {
     display: flex;
-    height: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0.5% 0.5% 0.5% 0.5%;
+    flex-wrap: wrap;
 }
 
 .categorias {
-    width: 30%;
+    width: 100%;
     border: solid 1px black;
     border-radius: 6px;
-}
-
-.categorias:hover{
-    box-shadow: 0px 0px 10px rgb(77, 77, 77);
-}
-
-.categorias:hover .titulo{
-    opacity: 100%;
-    border: solid 1px #131313;
+    background-color: rgb(207, 207, 207);
+    margin: 10px 10px 0% 10px;
 }
 
 .titulo{
@@ -84,7 +78,22 @@ a:visited{
     color: black
 }
 
-
+@media (min-width: 500px){
+    .categorias{
+        width: 30%;
+        margin: 10px 15px 0% 15px;
+    }
+    .sector-categorias {
+        flex-wrap:nowrap;
+    }
+    .categorias:hover .titulo{
+        opacity: 100%;
+        border: solid 1px #131313;
+    }
+    .categorias:hover{
+        box-shadow: 0px 20px 100px rgb(77, 77, 77);
+    }
+}
 
 
 
