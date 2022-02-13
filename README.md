@@ -1,11 +1,13 @@
 # grupo_4_nombre - Proyecto integrador.
 
-Construiremos un sitio web de E-commerce que ofrecera indumentaria para adultos, sin importar el g<énero.
+Construiremos un sitio web "E-commerce" que ofrecera indumentaria para adultos, sin importar el género.
 
 Integrantes:
     -Galimberti Andres Emilio,
+    -Herrera Gastón,
     -Neyra Juan José,
     -Oliveros Pagotto Lucas.
+    
 
 Sitios de referencia:
     - https://ar.tommy.com - Funcionalidades implementadas,
