@@ -57,7 +57,7 @@ main section div.titular{
     border-bottom: 0px;
 }
 
-main h3.titular{
+main section.titular h3.titular{
     display: block;
     max-width: 60.25rem;
     margin-left: auto;
@@ -68,6 +68,15 @@ main h3.titular{
     margin-bottom: 0px;
 }
 
+main section.bolsaDeCompras {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: #666666 1px solid;
+    width: 96%;
+    margin-bottom: 10px;
+}
+
 main section.carrito{
     border-top: 0px;
     border: 1px #666666 solid;
@@ -76,6 +85,7 @@ main section.carrito{
 main section.carrito{
     display: flex;
     width: 90%;
+    margin-bottom: 10px;
 }
 
 main section.carrito div.imagenA{
@@ -116,4 +126,22 @@ main section.carrito p.cancel{
 main section.carrito p.precio{
     margin-bottom: 0px;
     width: 40%;
+}
+
+main section.pago{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    border-bottom: #666666 1px solid;
+    width: 96%;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+main section.pago div{
+    width: 50%;    
+}
+
+main section.pago h3.titular{
+    
 }
