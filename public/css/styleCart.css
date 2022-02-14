@@ -132,7 +132,6 @@ main section.pago{
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    border-bottom: #666666 1px solid;
     width: 96%;
     margin-bottom: 10px;
     color: #FFFFFF;
@@ -142,6 +141,33 @@ main section.pago div{
     width: 50%;    
 }
 
-main section.pago h3.titular{
-    
+footer{
+    width: 100%;
+    border-top: #666666 solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #FFFFFF;
+}
+
+footer section div.nuestroLogo{
+    display: flex;
+    justify-content: center;
+}
+
+footer section nav ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #FFFFFF;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    color: #FFFFFF;
 }
