@@ -1,0 +1,44 @@
+/* --- Estilos en las etiquetas --- */
+header {
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #131313;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #a1a1a1;
+}
+
+/* --- Clases del <header> --- */
+.nav-register {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+}
+
+.bolsa {
+    width: 24px;
+    height: 24px;
+}
+
+.lupa {
+    width: 24px;
+    height: 24px;
+}
