@@ -74,7 +74,7 @@ main section.bolsaDeCompras {
     flex-wrap: wrap;
     border-bottom: #666666 1px solid;
     width: 96%;
-    margin-bottom: 10px;
+    padding-bottom: 5%;
 }
 
 main section.carrito{
@@ -135,6 +135,7 @@ main section.pago{
     width: 96%;
     margin-bottom: 10px;
     color: #FFFFFF;
+    border-bottom: #666666 1px solid;
 }
 
 main section.pago div{
