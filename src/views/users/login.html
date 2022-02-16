@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styleLogin.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styleIndex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  <!-- Fuentes -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" /><!-- Logos -->
+    <script src="https://kit.fontawesome.com/9f9a3d7540.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+</head>
+<body>
+      <header>
+        <div>
+            <img class="logo" src="images/header/logo-ejemp.png">
+        </div>
+
+        <div>            
+            <nav>
+                <ul>
+                    <li><a href="#">Novedades</a></li>
+                    <li><a href="#">Ropa</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><img class="lupa" src="images/header/lupa.png"></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="nav-register">
+            <nav>
+                <ul>
+                    <li><a href="#">Registrarse</a></li>
+                    <li><a href="#">Iniciar sesión</a></li>
+                </ul>
+            </nav>
+
+            <div>
+                <img class="bolsa" src="images/header/bolsa-de-la-compra.png">
+            </div>
+        </div>
+     </header>
+	<div class="cotentForm">
+		<form action="#" method="GET" class="FormLogin">
+     	    <div class="formGroupLabels">
+     			<label for="email" class="formLabelEmail">Direccion de Email</label>
+     			<label for="password" class="formLabelPass">Contraseña</label>
+     	    </div>
+     	    <div class="formGroupInputs">
+				<input type="text" name="Email" class="formInputEmail" placeholder="Escribe tu email">
+				<input type="password" name="pass" class="formInputPass" placeholder="Escribe tu Contraseña">
+     	    </div>
+     	    <input type="checkbox" name="remember" id="remember" value="Recordar">
+              <label for="remember">recordar contraseseña</label>  
+              <br>        
+              <input type="submit" class="bottonSubmit" value="Continuar">
+              <br>
+              <button class="bottonGoogle"  role="link" 
+                      onclick="window.location.href='https://w3docs.com';" >
+               <i class="fa-brands fa-google"></i>
+               Iniciar sesion con Google
+              </button>
+              <br>
+              <button class="bottonFacebook">
+               <i class="fa-brands fa-facebook"></i>
+               Iniciar sesion con Facebook
+              </button>
+		</form>	
+	</div>
+     <footer>
+        <div>
+            <p>STAY IN TOUCH</p>
+        </div>
+
+        <div class="opciones">
+            <a href="#" class="link"><h4>AYUDA</h4></a>
+            <a href="#" class="link"><h4>ENVIOS</h4></a>
+            <a href="#" class="link"><h4>DEVOLUCIONES</h4></a>
+            <a href="#" class="link"><h4>LOCALES</h4></a>
+        </div>
+
+        <div class="opciones">
+            <a href="#" class="link"><h4>TERMINOS Y CONDICIONES</h4></a>
+            <a href="#" class="link"><h4>CONTACTO</h4></a>
+        </div><br>
+
+        <div id="redes" class="opciones">
+            <a href="https://www.instagram.com/" class="link"><h4>INSTAGRAM</h4></a>
+            <h4>-</h4>
+            <a href="https://www.facebook.com" class="link"><h4>FACEBOOK</h4></a>
+        </div>
+    </footer>
+
+</body>
+</html>

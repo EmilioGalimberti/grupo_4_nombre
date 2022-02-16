@@ -1,0 +1,70 @@
+.divHeaderCenter{
+	display: flex;
+    justify-content: center;
+}
+
+body{
+    margin: 0%;
+    background-color: #131313;
+}
+.cotentForm{
+	display: flex;
+    justify-content: center;
+}
+
+.FormLogin{
+	border: 2px solid #c1e9f5; 
+	border-radius: 15px;
+	width: 50%;
+	color: white;
+}
+.formGroupLabels{
+	margin-top: 2%;
+	margin-bottom: 1%;
+}
+.formLabelEmail{
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+.formLabelPass{
+	margin-left: 11%;
+}
+
+.formGroupInputs{
+	margin-bottom: 2%;
+}
+.formInputEmail{
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+
+.formInputPass{
+	margin-left: 2%;
+}
+
+#remember{
+	margin-left:  10%;
+	margin-bottom: 2%;
+}
+
+.bottonSubmit{
+	margin-left:  10%;
+	margin-bottom: 2%;
+	color: green;
+}
+
+
+.bottonGoogle{
+	margin-left: 10%;
+	margin-bottom: 2%;
+	color: red;
+	
+}
+
+.bottonFacebook{
+	margin-left:  10%;
+	margin-bottom: 3%;
+	color: blue;
+}
