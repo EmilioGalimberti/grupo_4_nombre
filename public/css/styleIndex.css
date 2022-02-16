@@ -1,6 +1,6 @@
-html{
+/* html{
     height: 100%;
-}
+} */
 h2{
     margin: 0%;
 }
@@ -9,7 +9,6 @@ h4{
     color: white;
 }
 body{
-    margin: 0px;
     background-color: rgb(13,13,13);
 }
 
