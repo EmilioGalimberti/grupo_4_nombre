@@ -1,38 +1,83 @@
-/* html{
-    height: 100%;
-} */
-h2{
+/* --- 
+   ---- Estilos en las etiquetas --- */
+header {
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #131313;
+}
+
+main {
+    /* height: 80%; */
+    padding-bottom: 0.5%;
+    box-sizing: border-box;
+    border-bottom: solid 1px gray;
+}
+
+footer {
+    /* height: 14%; */
+    text-align: center;
+    color: #a1a1a1;
+    background-color: #131313;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #a1a1a1;
+}
+
+p {
+    font-size: 40px;
+}
+
+h2 {
     margin: 0%;
 }
-h4{
+
+h4 {
     margin: 0%;
     color: white;
 }
-body{
-    background-color: rgb(13,13,13);
+
+/* --- 
+   ---- Clases del <header> --- */
+.nav-register {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
 }
 
-header {
-    box-sizing: border-box;
-    height: 6%;
-    border-bottom: solid 1px gray;
-    display: flex;
-    padding-bottom: 2px;
-    position: static;
+.logo {
+    width: 48px;
+    height: 48px;
 }
+
+.bolsa {
+    width: 24px;
+    height: 24px;
+}
+
+.lupa {
+    width: 24px;
+    height: 24px;
+}
+
 
 #logo {
     width: 5%;
     height: 97%;
     margin-top: 2px;
     margin-left: 5px;
-}
-
-main{
-    box-sizing: border-box;
-    height: 80%;
-    border-bottom: solid 1px gray;
-    padding-bottom: 0.5%;
 }
 
 .sector-categorias {
@@ -70,20 +115,6 @@ main{
     z-index: 0;
 }
 
-footer {
-    height: 14%;
-    color: white;
-    text-align: center;
-}
-
-a{
-    text-decoration: none;
-}
-a:visited{
-    color: black
-}
-
-
 .opciones{
     display: flex;
     justify-content: center;
@@ -120,4 +151,9 @@ a:visited{
 
 
 
+/* --- 
+   ---- VER, LUEGO ELIMINAR ---
 
+a:visited{
+    color:#131313
+}*/
