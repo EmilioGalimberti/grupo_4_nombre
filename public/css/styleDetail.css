@@ -1,10 +1,15 @@
-/* --- Estilos en las etiquetas --- */
+/* --- Estilos en las etiquetas --- 
+   ----         -----          ---- */
 header {
     padding: 20px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #131313;
+}
+
+footer {
+    background-color: #555555;
 }
 
 ul {
@@ -15,13 +20,24 @@ ul {
     gap: 1.3rem;
 }
 
+input {
+    min-width: 55%;
+    height: 25px;
+    padding-left: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #2d9fd9;
+}
+
 a {
     text-decoration: none;
     font-size: 1.1em;
     color: #a1a1a1;
 }
 
-/* --- Clases del <header> --- */
+/* --- Clases del <header> --- 
+   ----     -----         ---- */
 .nav-register {
     display: flex;
     align-items: center;
@@ -41,4 +57,59 @@ a {
 .lupa {
     width: 24px;
     height: 24px;
+}
+
+/* --- Clases del <footer> --- 
+   ----     -----         ---- */
+.idea-txt {
+    width: 256px;
+    height: 256px;
+}
+
+.footer-sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-copyright {
+    padding: 3px 0px;
+    background-color: #a1a1a1;
+}
+
+.social-network {
+    display: flex;
+    gap: 0.7rem;
+    justify-content: center;
+    /* margin-left: 1rem; */
+}
+
+.form-contact {
+    width: 450px;
+    margin-bottom: 1rem;
+}
+
+.socialnet-margin {
+    width: 450px;
+    margin-bottom: 4rem;
+}
+
+.text-align {
+    text-align: center;
+}
+
+.margin {
+    margin: 0 0 1rem 0;
+}
+
+.form-margin {
+    margin: 0 0 0.5rem 0;
+}
+
+.button {
+    cursor: pointer;
+    border: 2.2px solid #555555;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #b3d342;
 }
