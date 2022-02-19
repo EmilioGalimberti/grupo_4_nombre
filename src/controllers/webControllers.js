@@ -10,7 +10,7 @@ module.exports = {
     products:(req,res) =>{
         res.render(path.resolve(__dirname, '../views/products/productDetail'));
     },
-    /*login:(req,res) =>{
+    login:(req,res) =>{
         res.render(path.resolve(__dirname, '../views/users/login'));
-    }*/
+    }
 }
