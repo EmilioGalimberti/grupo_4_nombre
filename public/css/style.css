@@ -1,0 +1,36 @@
+/* ---- Estilos HEADER MOBILE --- */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+    border-bottom: #666666 solid 1px;
+}
+
+header section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+div.burger-menu{
+    width: 30%;
+}
+
+div.burger-menu i{
+    background-color: #131313;;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+}
+/* ---- Estilos HEADER MOBILE --- */
+
+@media (min-width: 1024px) {
+    header{
+        display: none;
+    }
+}

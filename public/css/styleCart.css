@@ -3,35 +3,6 @@ body{
     background-color: #131313;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #FFFFFF;
-    border-bottom: #666666 solid 1px;
-}
-
-header section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30%;
-}
-
-div.burger-menu{
-    width: 30%;
-}
-
-div.burger-menu i{
-    background-color: #131313;;
-    color: white;
-    border-radius: 5px;
-    font-size: 20px;
-    height: 20px;
-    width: 20px;
-    margin-left: 10px;
-}
-
 #logo img{
     display: flex;
     justify-content: center;
