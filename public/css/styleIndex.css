@@ -2,14 +2,13 @@
    ---- Estilos en las etiquetas --- */
 header {
     padding: 20px 60px;
-    display: flex;
     justify-content: space-between;
+    display: flex;
     align-items: center;
     background-color: #131313;
 }
 
 main {
-    /* height: 80%; */
     padding-bottom: 0.5%;
     box-sizing: border-box;
     border-bottom: solid 1px gray;
@@ -36,6 +35,9 @@ a {
     color: #a1a1a1;
 }
 
+body main a{
+    color: #131313;
+}
 p {
     font-size: 40px;
 }
@@ -44,8 +46,9 @@ h2 {
     margin: 0%;
 }
 
-h4 {
+p {
     margin: 0%;
+    margin-top: 5px;
     color: white;
 }
 
@@ -119,13 +122,57 @@ h4 {
     display: flex;
     justify-content: center;
     grid-gap: 7%;
-    margin: 10px 10px 0% 10px;
+    margin: 0px 10px 0% 10px;
+    height: 50px;
+}
+
+#slider{
+    overflow: hidden;
+}
+#slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+#slider figure img{
+    width: 20%;
+    float: left;
+}
+
+@keyframes  slider {
+    0% {
+        left: 0%;
+    }
+    20% {
+        left: 0%;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    90% {
+        left: -300%;
+    }
 }
 
 @media (min-width: 500px){
     .categorias{
         width: 30%;
         margin: 10px 15px 0% 15px;
+        height: 900px;
     }
     .sector-categorias {
         flex-wrap:nowrap;
@@ -136,6 +183,9 @@ h4 {
     }
     .categorias:hover{
         box-shadow: 0px 20px 100px rgb(77, 77, 77);
+    }
+    .categorias:hover .titulo {
+        background-color: #84b6f4;
     }
     .opciones{
         grid-gap: 3%;
