@@ -6,13 +6,13 @@ module.exports = {
     index: (req,res) =>{
         res.render(path.resolve(__dirname, '../views/web/index'),{titulos, "numero":1});
     },
-    compra: (req,res) =>{
+    carrito: (req,res) =>{
         res.render(path.resolve(__dirname, '../views/products/productCart'),{titulos, "numero":0});
     },
     products:(req,res) =>{
         res.render(path.resolve(__dirname, '../views/products/productDetail'),{titulos, "numero":2});
     },
-    /*login:(req,res) =>{
+    login:(req,res) =>{
         res.render(path.resolve(__dirname, '../views/users/login'));
-    }*/
+    }
 }

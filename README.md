@@ -16,9 +16,4 @@ Sitios de referencia:
     - https://www.gucci.com/au/en_au/ - Header,
     - https://www.lamartina.com.ar, 
 
-Sprint 2:
 Tablero de Trabajo: https://trello.com/b/z1coJYmg/projecto-integrado-dh
-
-Sprint 3:
-Que se hizo bien:
--Mejoramos en la comunicacion y eficiencia del equipo 

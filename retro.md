@@ -1,12 +1,12 @@
 1. Comenzar a hacer: sprint 2.
-2. Hacer más: Comentar mejor las tareas.
-3. Continuar haciendo: Daily meetings.
-4. Hacer menos: Menor division de tareas.
+2. Hacer más: mejorar en la claridad de las tareas.
+3. Continuar haciendo: daily meetings.
+4. Hacer menos: división de tareas.
 5. Dejar de hacer: -
 
-Actualizacion
+Actualizacion #1
 1. Comenzar a hacer: sprint 3.
-2. Hacer más: Trabajar con mas Branches, mas daily meetings.
-3. Continuar haciendo: Buena comunicacion y eficiencia en trabajo. 
-4. Hacer menos: Postergar tareas.
+2. Hacer más: trabajar con mas ramas en git / aumentar daily meetings.
+3. Continuar haciendo: seguir mejorando en la comunicacion y eficiencia del trabajo. 
+4. Hacer menos: postergar tareas.
 5. Dejar de hacer: -
