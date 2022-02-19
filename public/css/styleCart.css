@@ -11,6 +11,7 @@ body{
 }
 
 main{
+    background-color: #FFFFFF;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -34,8 +35,8 @@ main section.titular h3.titular{
     margin-left: auto;
     margin-right: auto;
     padding: 0 50px;
-    color: #FFFFFF;
-    border-bottom: 1px #666666 solid;
+    color: #131313;
+    border-bottom: 1px #131313 solid;
     margin-bottom: 0px;
 }
 
@@ -43,14 +44,14 @@ main section.bolsaDeCompras {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    border-bottom: #666666 1px solid;
+    border-bottom: #131313 1px solid;
     width: 96%;
     padding-bottom: 5%;
 }
 
 main section.carrito{
     border-top: 0px;
-    border: 1px #666666 solid;
+    border: 1px #131313 solid;
 }
 
 main section.carrito{
@@ -78,7 +79,7 @@ main section.carrito div.cajaDescripciones{
 
 main section.carrito p{
     display: flex;
-    color: #FFFFFF;
+    color: #131313;
     
 }
 
@@ -105,8 +106,8 @@ main section.pago{
     flex-wrap: wrap;
     width: 96%;
     margin-bottom: 10px;
-    color: #FFFFFF;
-    border-bottom: #666666 1px solid;
+    color: #131313;
+    border-bottom: #131313 1px solid;
 }
 
 main section.pago div{
