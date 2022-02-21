@@ -1,12 +1,5 @@
 /* --- 
    ---- Estilos en las etiquetas --- */
-header {
-    padding: 20px 60px;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    background-color: #131313;
-}
 
 main {
     padding-bottom: 0.5%;
@@ -19,20 +12,6 @@ footer {
     text-align: center;
     color: #a1a1a1;
     background-color: #131313;
-}
-
-ul {
-    padding-left: 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 1.3rem;
-}
-
-a {
-    text-decoration: none;
-    font-size: 1.1em;
-    color: #a1a1a1;
 }
 
 body main a{
@@ -54,28 +33,6 @@ p {
 
 /* --- 
    ---- Clases del <header> --- */
-.nav-register {
-    display: flex;
-    align-items: center;
-    gap: 1.3rem;
-}
-
-.logo {
-    width: 48px;
-    height: 48px;
-}
-
-.bolsa {
-    width: 24px;
-    height: 24px;
-}
-
-.lupa {
-    width: 24px;
-    height: 24px;
-}
-
-
 #logo {
     width: 5%;
     height: 97%;
@@ -198,12 +155,3 @@ p {
         padding-bottom: 20px;
     }
 }
-
-
-
-/* --- 
-   ---- VER, LUEGO ELIMINAR ---
-
-a:visited{
-    color:#131313
-}*/
