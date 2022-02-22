@@ -96,7 +96,7 @@ h2 {
     }
 }
 
-@media (min-width: 500px){
+@media (min-width: 800px){
     .categorias{
         width: 30%;
         margin: 10px 15px 0% 15px;
