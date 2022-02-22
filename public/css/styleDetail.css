@@ -76,10 +76,6 @@ footer a {
 
 /* --- Clases del <footer> --- 
    ----     -----         ---- */
-.idea-txt {
-    width: 256px;
-    height: 256px;
-}
 
 .footer-sections {
     display: flex;

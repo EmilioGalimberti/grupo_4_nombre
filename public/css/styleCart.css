@@ -113,34 +113,3 @@ main section.pago{
 main section.pago div{
     width: 50%;    
 }
-
-footer{
-    width: 100%;
-    border-top: #666666 solid 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    color: #FFFFFF;
-}
-
-footer section div.nuestroLogo{
-    display: flex;
-    justify-content: center;
-}
-
-footer section nav ul{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    color: #FFFFFF;
-    list-style: none;
-    margin-bottom: 10px;
-}
-
-.info{
-    display: flex;
-    justify-content: space-between;
-    margin-right: 10px;
-    color: #FFFFFF;
-}
