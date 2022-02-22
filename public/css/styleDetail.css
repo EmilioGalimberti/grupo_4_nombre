@@ -12,7 +12,11 @@ footer {
     background-color: #131313;
 }
 
-ul {
+footer div i {
+    color: #a1a1a1;
+}
+
+header nav ul {
     padding-left: 0;
     list-style: none;
     display: flex;
@@ -20,21 +24,37 @@ ul {
     gap: 1.3rem;
 }
 
+footer ul {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 input {
     min-width: 55%;
-    height: 25px;
+    height: 1.75rem;
     padding-left: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    border-radius: 10px;
-    border: 1px solid #2d9fd9;
+    border-radius: 6px;
+    border: 1px;
 }
 
 a {
     text-decoration: none;
-    font-size: 1.1em;
     color: #a1a1a1;
 }
+
+header a {
+    font-size: 1.1em;
+}
+
+footer a {
+    font-size: 1em;
+}
+
 
 /* --- Clases del <header> --- 
    ----     -----         ---- */
@@ -69,23 +89,29 @@ a {
 footer div ul {
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
 
 .footer-copyright {
-    padding: 3px 0px;
+    padding: 0.1rem 0;
     background-color: #a1a1a1;
 }
 
 .social-network {
+    padding-top: 1.7rem;
     display: flex;
     gap: 0.7rem;
     justify-content: center;
-    /* margin-left: 1rem; */
 }
 
 .form-contact {
-    width: 450px;
-    margin-bottom: 1rem;
+    /* width: 450px; */
+    width: 30%;
+    padding: 5rem 0 1.3rem;
+}
+
+.links-contact {
+    padding: 5rem 0 1.3rem;
 }
 
 .socialnet-margin {
@@ -107,8 +133,13 @@ footer div ul {
 
 .button {
     cursor: pointer;
-    border: 2.2px solid #555555;
-    border-radius: 4px;
+    border: 2.2px solid #55555579;
+    border-radius: 5px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #b3d342;
+    background-color: #6886C5;
+    padding: 0.17rem 0.7rem;
+}
+
+.font-gray {
+    color: #a1a1a1;
 }
