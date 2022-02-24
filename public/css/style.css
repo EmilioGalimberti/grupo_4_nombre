@@ -39,6 +39,8 @@ header div.desktop{
      background-color: #131313;
      display: flex;
      flex-wrap: wrap;
+     width: 100%;
+
 }
 
     footer div i {
@@ -71,7 +73,9 @@ footer ul {
 
 .footer-sections {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
 }
 
 footer div ul {
@@ -84,6 +88,8 @@ footer div ul {
     padding: 0.1rem 0;
     background-color: #a1a1a1;
     
+    width: 100%;
+    
 }
 
 .social-network {
@@ -95,17 +101,18 @@ footer div ul {
 
 .form-contact {
     /* width: 450px; */
-    width: 30%;
+
     padding: 5rem 0 1.3rem;
 }
 
 .links-contact {
+    width: 100%;
     padding: 5rem 0 1.3rem;
 }
 
 .socialnet-margin {
-    width: 450px;
     margin-bottom: 4rem;
+    width: 100%;
 }
 
 .text-align {
@@ -191,7 +198,7 @@ footer div ul {
     /* --- Clases del <FOOTER> --- */
     footer {
         background-color: #131313;
-        
+        display: block;
     }
 
     footer div i {
@@ -222,67 +229,69 @@ footer div ul {
     /* --- Clases del <footer> --- 
    ----     -----         ---- */
 
-.footer-sections {
-    display: flex;
-    justify-content: space-around;
-}
+    .footer-sections {
+        display: flex;
+        justify-content: space-around;
+        width: auto;
+    }
 
-footer div ul {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-}
+    footer div ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
 
-.footer-copyright {
-    padding: 0.1rem 0;
-    background-color: #a1a1a1;
-    
-}
+    .footer-copyright {
+        padding: 0.1rem 0;
+        background-color: #a1a1a1;
+        width: auto;
+    }
 
-.social-network {
-    padding-top: 1.7rem;
-    display: flex;
-    gap: 0.7rem;
-    justify-content: center;
-}
+    .social-network {
+        padding-top: 1.7rem;
+        display: flex;
+        gap: 0.7rem;
+        justify-content: center;
+    }
 
-.form-contact {
-    /* width: 450px; */
-    width: 30%;
-    padding: 5rem 0 1.3rem;
-}
+    .form-contact {
+        /* width: 450px; */
+        width: 30%;
+        padding: 5rem 0 1.3rem;
+    }
 
-.links-contact {
-    padding: 5rem 0 1.3rem;
-}
+    .links-contact {
+        width: auto;
+        padding: 5rem 0 1.3rem;
+    }
 
-.socialnet-margin {
-    width: 450px;
-    margin-bottom: 4rem;
-}
+    .socialnet-margin {
+        width: 450px;
+        margin-bottom: 4rem;
+    }
 
-.text-align {
-    text-align: center;
-}
+    .text-align {
+        text-align: center;
+    }
 
-.margin {
-    margin: 0 0 1rem 0;
-}
+    .margin {
+        margin: 0 0 1rem 0;
+    }
 
-.form-margin {
-    margin: 0 0 0.5rem 0;
-}
+    .form-margin {
+        margin: 0 0 0.5rem 0;
+    }
 
-.button {
-    cursor: pointer;
-    border: 2.2px solid #55555579;
-    border-radius: 5px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #6886C5;
-    padding: 0.17rem 0.7rem;
-}
+    .button {
+        cursor: pointer;
+        border: 2.2px solid #55555579;
+        border-radius: 5px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: #6886C5;
+        padding: 0.17rem 0.7rem;
+    }
 
-.font-gray {
-    color: #a1a1a1;
-}
+    .font-gray {
+        color: #a1a1a1;
+    }
 }
