@@ -7,37 +7,16 @@ main {
     border-bottom: solid 1px gray;
 }
 
-footer {
-    /* height: 14%; */
-    text-align: center;
-    color: #a1a1a1;
-    background-color: #131313;
-}
-
 body main a{
     color: #131313;
 }
+
 p {
     font-size: 40px;
 }
 
 h2 {
     margin: 0%;
-}
-
-p {
-    margin: 0%;
-    margin-top: 5px;
-    color: white;
-}
-
-/* --- 
-   ---- Clases del <header> --- */
-#logo {
-    width: 5%;
-    height: 97%;
-    margin-top: 2px;
-    margin-left: 5px;
 }
 
 .sector-categorias {
@@ -73,14 +52,6 @@ p {
     height: 100%;
     position: relative;
     z-index: 0;
-}
-
-.opciones{
-    display: flex;
-    justify-content: center;
-    grid-gap: 7%;
-    margin: 0px 10px 0% 10px;
-    height: 50px;
 }
 
 #slider{
@@ -125,11 +96,11 @@ p {
     }
 }
 
-@media (min-width: 500px){
+@media (min-width: 800px){
     .categorias{
         width: 30%;
         margin: 10px 15px 0% 15px;
-        height: 900px;
+        height: 800px;
     }
     .sector-categorias {
         flex-wrap:nowrap;
@@ -143,15 +114,5 @@ p {
     }
     .categorias:hover .titulo {
         background-color: #84b6f4;
-    }
-    .opciones{
-        grid-gap: 3%;
-    }
-    .link:hover{
-        box-shadow: 0px 5px 0px rgb(77, 77, 77);
-    }
-    #redes {
-        grid-gap: 1%;
-        padding-bottom: 20px;
     }
 }
