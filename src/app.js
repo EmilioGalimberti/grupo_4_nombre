@@ -2,7 +2,7 @@ const path = require("path");
 const express = require("express");
 const app = express();
 
-const webRoutes =  require('./routers/webRoutes.js');
+const webRoutes =  require('./routes/webRoutes.js');
 const PORT = 3050;
 
 app.set('view engine', 'ejs');
