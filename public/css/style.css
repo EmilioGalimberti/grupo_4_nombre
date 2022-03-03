@@ -5,6 +5,7 @@ header{
     align-items: center;
     color: #FFFFFF;
     border-bottom: #666666 solid 1px;
+    background-color: #131313;
 }
 
 header section {
@@ -33,10 +34,119 @@ header div.desktop{
     display: none;
 }
 
+/* --- Clases del <FOOTER> --- */
+ footer {
+     background-color: #131313;
+     display: flex;
+     flex-wrap: wrap;
+     width: 100%;
+
+}
+
+    footer div i {
+        color: #a1a1a1;
+    }
+    
+footer ul {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    }
+
+    input {
+        min-width: 55%;
+        height: 1.75rem;
+        padding-left: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 6px;
+        border: 1px;
+    }
+
+    footer a {
+        font-size: 1em;
+    }
+    /* --- Clases del <footer> --- 
+   ----     -----         ---- */
+
+.footer-sections {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+footer div ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.footer-copyright {
+    padding: 0.1rem 0;
+    background-color: #a1a1a1;
+    
+    width: 100%;
+    
+}
+
+.social-network {
+    padding-top: 1.7rem;
+    display: flex;
+    gap: 0.7rem;
+    justify-content: center;
+}
+
+.form-contact {
+    /* width: 450px; */
+
+    padding: 5rem 0 1.3rem;
+}
+
+.links-contact {
+    width: 100%;
+    padding: 5rem 0 1.3rem;
+}
+
+.socialnet-margin {
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+.text-align {
+    text-align: center;
+}
+
+.margin {
+    margin: 0 0 1rem 0;
+}
+
+.form-margin {
+    margin: 0 0 0.5rem 0;
+}
+
+.button {
+    cursor: pointer;
+    border: 2.2px solid #55555579;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #6886C5;
+    padding: 0.17rem 0.7rem;
+}
+
+.font-gray {
+    color: #a1a1a1;
+}
+
+
 @media (min-width: 1024px) {
     header section.mobile{
         display: none;
     }
+
+    /* ---- Estilos HEADER desktop --- */
     header div.desktop {
         width: 100%;
         padding: 20px 60px;
@@ -45,6 +155,11 @@ header div.desktop{
         align-items: center;
         background-color: #131313;
     }
+
+    header a {
+        font-size: 1.1em;
+    }
+
     ul {
         padding-left: 0;
         list-style: none;
@@ -55,7 +170,6 @@ header div.desktop{
     
     a {
         text-decoration: none;
-        font-size: 1.1em;
         color: #a1a1a1;
     }
     
@@ -79,5 +193,105 @@ header div.desktop{
     .lupa {
         width: 24px;
         height: 24px;
-    }    
+    }
+    
+    /* --- Clases del <FOOTER> --- */
+    footer {
+        background-color: #131313;
+        display: block;
+    }
+
+    footer div i {
+        color: #a1a1a1;
+    }
+    
+    footer ul {
+        padding-left: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    input {
+        min-width: 55%;
+        height: 1.75rem;
+        padding-left: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 6px;
+        border: 1px;
+    }
+
+    footer a {
+        font-size: 1em;
+    }
+    /* --- Clases del <footer> --- 
+   ----     -----         ---- */
+
+    .footer-sections {
+        display: flex;
+        justify-content: space-around;
+        width: auto;
+    }
+
+    footer div ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .footer-copyright {
+        padding: 0.1rem 0;
+        background-color: #a1a1a1;
+        width: auto;
+    }
+
+    .social-network {
+        padding-top: 1.7rem;
+        display: flex;
+        gap: 0.7rem;
+        justify-content: center;
+    }
+
+    .form-contact {
+        /* width: 450px; */
+        width: 30%;
+        padding: 5rem 0 1.3rem;
+    }
+
+    .links-contact {
+        width: auto;
+        padding: 5rem 0 1.3rem;
+    }
+
+    .socialnet-margin {
+        width: 450px;
+        margin-bottom: 4rem;
+    }
+
+    .text-align {
+        text-align: center;
+    }
+
+    .margin {
+        margin: 0 0 1rem 0;
+    }
+
+    .form-margin {
+        margin: 0 0 0.5rem 0;
+    }
+
+    .button {
+        cursor: pointer;
+        border: 2.2px solid #55555579;
+        border-radius: 5px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: #6886C5;
+        padding: 0.17rem 0.7rem;
+    }
+
+    .font-gray {
+        color: #a1a1a1;
+    }
 }
