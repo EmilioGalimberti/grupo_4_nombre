@@ -6,7 +6,7 @@
   "category": "Hombre",
   "description": "Parte superior de cuero | suela de goma | forros textiles | letras de Lacoste en la lengüeta y marca de cocodrilo de metal tonal en el talón",
   "color": "Black • 02H",
-  "image": "man-chukkas-black.jpg"
+  "image": "images/productsData/man-chukkas-black.jpg"
  },
  {
   "id": 2,
@@ -52,5 +52,25 @@
   "description": "Bolsillo plano exterior | bandolera y solapa de cuero | cierre de cocodrilo",
   "color": "Cinabre • 124",
   "image": "woman-bag-croco-cinabre.jpg"
+ },
+ {
+  "id": 7,
+  "name": "zapatillas reebooks",
+  "description": "descrpicion",
+  "category": "runner",
+  "colors": "azul",
+  "tall": "34",
+  "price": "34.45",
+  "image": "/images/productsData/1646497796258_img_.jpg"
+ },
+ {
+  "id": 8,
+  "name": "zapatillas",
+  "description": "des",
+  "category": "runner",
+  "colors": "azul",
+  "tall": "34",
+  "price": "2344",
+  "image": "/images/productsData/1646497901344_img_.png"
  }
 ]

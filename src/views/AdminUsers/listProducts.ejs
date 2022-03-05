@@ -61,13 +61,13 @@
 		      <h2>Crear Producto</h2>
 		    </div>
 		    <div class="modal-body">
-		      <form style="height: 500px;" action="#" method="POST">
+		      <form style="height: 500px;" action="/ProductCreate" method="POST" enctype="multipart/form-data">
 					<h6 style="color: black; margin: 1%;">Nombre del producto</h6>
 				    <input type="text" id="name" name="name">
 				    <h6 style="color: black; margin: 1%;">Descripcion</h6>
 				    <input type="text" id="description" name="description">
 				    <h6 style="color: black; margin: 1%;">Seleccione imagen</h6>
-				    <input type="file" name="imagen" />
+				    <input type="file" id="image" name="image" placeholder="Agregar foto" />
 				    <h6 style="color: black; margin: 1%;">Categoría</h6>
 				    <input type="text" id="category" name="category">
 				    <h6 style="color: black; margin: 1%;">Colores</h6>
@@ -95,7 +95,7 @@
 					<% products.forEach(product =>{%>
 						<section class="product-box">
 							<form class="FormProducts">
-							  <img src="\images\buzos-4.jpg" alt="Avatar" style="width:50%">
+							  <img src="<%= product.image %>" alt="Avatar" style="width:50%">
 							  <div class="container">
 							    <h6 class="descripcion"><%= product.name %></h6>
 					            <h6 class="cancel">X</h6>
