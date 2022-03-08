@@ -7,7 +7,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
-module.exports = {
+const productsControllers = {
     listProducts:(req, res) =>{
         res.render('AdminUsers/listProducts', {
             products
@@ -25,7 +25,7 @@ module.exports = {
             };
             products.push(newProduct);
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-            res.redirect('/listProducts');
+            res.redirect('back');
         }
         else{
             let newProduct = {
@@ -35,8 +35,11 @@ module.exports = {
             };
             products.push(newProduct);
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-            res.redirect('/listProducts');   
+            res.redirect('back');   
         }
         
     }
-}
+};
+
+
+module.exports = productsControllers;
