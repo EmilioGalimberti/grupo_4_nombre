@@ -84,10 +84,13 @@ footer div ul {
     margin: 0;
 }
 
+.copy{
+    width: 100%;
+}
+
 .footer-copyright {
     padding: 0.1rem 0;
     background-color: #a1a1a1;
-    
     width: 100%;
     
 }
