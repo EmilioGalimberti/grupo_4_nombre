@@ -9,11 +9,14 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsControllers = {
     listProducts:(req, res) =>{
-        res.render('AdminUsers/listProducts', {
+        res.render('adminProducts/listProducts', {
             products
         });
     },
 
+    formProduct:(req, res) =>{
+        res.render('adminProducts/productsForms');
+    },
     // Create Product and storage method
     productCreate: (req, res) => {
 
