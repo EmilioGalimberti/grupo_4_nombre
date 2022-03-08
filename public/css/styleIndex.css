@@ -1,5 +1,4 @@
-/* --- 
-   ---- Estilos en las etiquetas --- */
+/* --- Estilos en las etiquetas --- */
 
 main {
     padding-bottom: 0.5%;
@@ -9,10 +8,6 @@ main {
 
 body main a{
     color: #131313;
-}
-
-p {
-    font-size: 40px;
 }
 
 h2 {

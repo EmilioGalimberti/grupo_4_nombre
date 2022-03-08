@@ -12,7 +12,7 @@ app.set('views', path.join(__dirname, '/views'));
 app.use(express.static(path.resolve(__dirname, '../public')));
 
 app.use("/", webRoutes);
-app.use('/producto', routesProducts);
+app.use("/", routesProducts);
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en el puerto ${PORT}`);
