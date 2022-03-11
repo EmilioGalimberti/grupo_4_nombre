@@ -31,7 +31,7 @@ const productsControllers = {
             };
             products.push(newProduct);
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-            res.redirect('back');
+            res.redirect('/products');
         }
         else{
             let newProduct = {
@@ -41,7 +41,7 @@ const productsControllers = {
             };
             products.push(newProduct);
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-            res.redirect('back');   
+            res.redirect('/products');   
         }
         
     }
