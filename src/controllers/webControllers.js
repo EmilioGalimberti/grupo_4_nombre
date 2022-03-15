@@ -9,6 +9,9 @@ module.exports = {
     carrito: (req,res) =>{
         res.render(path.resolve(__dirname, '../views/products/productCart'),{titulos, "numero":0});
     },
+    detail:(req,res) =>{
+        res.render(path.resolve(__dirname, '../views/products/productDetail'));
+    },
     products:(req,res) =>{
         res.render(path.resolve(__dirname, '../views/products/products'),{titulos, "numero":2});
     },

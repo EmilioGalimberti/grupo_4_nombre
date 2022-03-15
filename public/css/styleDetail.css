@@ -1,141 +1,38 @@
-    /* --- Estilos en las etiquetas --- 
-   ----         -----          ---- */
-header {
-    padding: 20px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #131313;
+h1{
+    margin: 0;
 }
 
-footer {
-    background-color: #131313;
+p{
+    margin: 0;
 }
 
-footer div i {
-    color: #a1a1a1;
+.buzo{
+    width: 512px;
+    height: 512px;
 }
 
-header nav ul {
-    padding-left: 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 1.3rem;
-}
-
-footer ul {
-    padding-left: 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-input {
-    min-width: 55%;
-    height: 1.75rem;
-    padding-left: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 6px;
-    border: 1px;
-}
-
-a {
-    text-decoration: none;
-    color: #a1a1a1;
-}
-
-header a {
-    font-size: 1.1em;
-}
-
-footer a {
-    font-size: 1em;
-}
-
-
-/* --- Clases del <header> --- 
-   ----     -----         ---- */
-.nav-register {
-    display: flex;
-    align-items: center;
-    gap: 1.3rem;
-}
-
-.logo {
+.zapas{
     width: 48px;
     height: 48px;
 }
 
-.bolsa {
-    width: 24px;
-    height: 24px;
-}
-
-/* --- Clases del <footer> --- 
-   ----     -----         ---- */
-
-.footer-sections {
+.alinear{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 2rem;
 }
 
-footer div ul {
+.list-detail{
     display: flex;
     flex-direction: column;
-    margin: 0;
-}
-
-.footer-copyright {
-    padding: 0.1rem 0;
-    background-color: #a1a1a1;
-}
-
-.social-network {
-    padding-top: 1.7rem;
-    display: flex;
+    align-items: flex-start;
     gap: 0.7rem;
-    justify-content: center;
+    padding-left: 1.5rem;
 }
 
-.form-contact {
-    /* width: 450px; */
-    width: 30%;
-    padding: 5rem 0 1.3rem;
-}
-
-.links-contact {
-    padding: 5rem 0 1.3rem;
-}
-
-.socialnet-margin {
-    width: 450px;
-    margin-bottom: 4rem;
-}
-
-.text-align {
+.article{
+    width: 33%;
+    display: flex;
+    align-items: center;
     text-align: center;
-}
-
-.margin {
-    margin: 0 0 1rem 0;
-}
-
-.form-margin {
-    margin: 0 0 0.5rem 0;
-}
-
-.button {
-    cursor: pointer;
-    border: 2.2px solid #55555579;
-    border-radius: 5px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #6886C5;
-    padding: 0.17rem 0.7rem;
-}
-
-.font-gray {
-    color: #a1a1a1;
 }
