@@ -6,24 +6,19 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-let titulos = ['CARRITO', "HOME", "PRODUCTS","SING UP"]
+let titulos = ['CARRITO', "HOME", "PRODUCTS","SING UP",]
 
 const productsControllers = {
     listProducts:(req, res) =>{
-        res.render('adminProducts/listProducts', {
-            products
-        });
+        res.render('adminProducts/listProducts', {products, toThousand, titulos, "numero": 5});
     },
 
     formProduct:(req, res) =>{
-        res.render('adminProducts/productsForms',{
-            titulos, "numero":4
-        });
+        res.render('adminProducts/productsForms',{titulos, "numero":4});
     },
     // Create Product and storage method
     productCreate: (req, res) => {
-
-       if(req.file.filename){
+        if(req.file.filename){
             let newProduct = {
                 id: products[products.length - 1].id + 1,
                 ...req.body,
@@ -42,9 +37,15 @@ const productsControllers = {
             products.push(newProduct);
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
             res.redirect('/products');   
-        }
-        
-    }
+        }  
+    },
+
+    destroy : (req, res) => {
+		let id = req.params.id;
+		let finalProducts = products.filter(product => product.id != id);
+		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
+		res.redirect('/');
+	}
 };
 
 

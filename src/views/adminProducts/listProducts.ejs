@@ -5,217 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/styleAdminProducts.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styleIndex.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  <!-- Fuentes -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" /><!-- Logos -->
     <script src="https://kit.fontawesome.com/9f9a3d7540.js" crossorigin="anonymous"></script>
     <title>Administraciòn de Productos</title>
 </head>
 <body>
-      <header>
-        <div>
-            <img class="logo" src="images/header/logo-ejemp.png">
-        </div>
-
-        <div>            
-            <nav>
-                <ul>
-                    <li><a href="#">Novedades</a></li>
-                    <li><a href="#">Ropa</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                </ul>
-            </nav>
-        </div>
-        
-        <div class="nav-register">
-            <nav>
-                <ul>
-                    <li><a href="#">Registrarse</a></li>
-                    <li><a href="#">Iniciar sesión</a></li>
-                </ul>
-            </nav>
-
-            <div>
-                <img class="bolsa" src="images/header/bolsa-de-la-compra.png">
-            </div>
-        </div>
-     </header>	
-	 <div class="containerForm2">
-		<form style="margin-right: 500px;">
-		    <input type="search" id="search" name="search">
-		    <button>Buscar</button>
-		</form>
-
-        <!-- Trigger/Open The Modal -->
-		
-		<a href="/products/create">
-			<button onClick="myFunction()"  id="myBtn">Crear producto</button>
-		</a>
-		
-		
-		<!-- The Modal -->
-		<div id="myModal" class="modal">
-
-		  <!-- Modal content -->
-		  <div class="modal-content">
-		    <div class="modal-header">
-		      <span class="close">&times;</span>
-		      <h2>Crear Producto</h2>
-		    </div>
-		    <div class="modal-body">
-		      <form style="height: 500px;" action="/ProductCreate" method="POST" enctype="multipart/form-data">
-					<h6 style="color: black; margin: 1%;">Nombre del producto</h6>
-				    <input type="text" id="name" name="name">
-				    <h6 style="color: black; margin: 1%;">Descripcion</h6>
-				    <input type="text" id="description" name="description">
-				    <h6 style="color: black; margin: 1%;">Seleccione imagen</h6>
-				    <input type="file" id="image" name="image" placeholder="Agregar foto" />
-				    <h6 style="color: black; margin: 1%;">Categoría</h6>
-				    <input type="text" id="category" name="category">
-				    <h6 style="color: black; margin: 1%;">Colores</h6>
-				    <input type="text" id="colors" name="colors">
-				    <h6 style="color: black; margin: 1%;">talle</h6>
-				    <input type="text" id="tall" name="tall">
-				    <h6 style="color: black; margin: 1%;">Precio</h6>
-				    <input type="number" step="0.01" id="price" name="price">
-				    <br>
-				    <input type="submit" value="Crear">
-				</form>
-		    </div>
-		    <div class="modal-footer">
-		      <h3>Modal Footer</h3>
-		    </div>
-		  </div>
-
-</div>
-	 </div>
-		<br><br>
-	 <div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<div class="col-12 col-sm-6 col-lg-3">
-					<% products.forEach(product =>{%>
-						<section class="product-box">
-							<form class="FormProducts">
-							  <img src="<%= product.image %>" alt="Avatar" style="width:50%">
-							  <div class="container">
-							    <h6 class="descripcion"><%= product.name %></h6>
-					            <h6 class="cancel">X</h6>
-					            <h6 class=" precio">$10000</h6>
-							  </div>
-							  <input type="submit" value="Modificar">
-							  <button> eliminar</button>
-						  	</form>
-						</section>
-					<%});%>
+	<!-- Header -->
+	<%- include('../partials/header') %>
+	<!-- /Header -->
+    <main>
+		<div class="container products-wrapper">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="products-title">Todos los productos</h2>
 				</div>
-	  		</div>
-	  	</div>
-	 </div>
-	 <div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Basado en tu última visita</h2>
+	
+				<% products.forEach(function(product){ 
+					let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
+				%>
+					<div class="col-12 col-sm-6 col-lg-3">
+						<section class="product-box">
+							<a href="/products/detail/<%= product.id %>">
+								<figure class="product-box_image">
+									<img src="/images/productsData/<%= product.image %>" alt="imagen de producto">
+								</figure>
+								<article class="product-box_data">
+									<h2><%= toThousand(finalPrice) %></h2>
+									<span><%= product.discount %> %OFF</span>
+									<p><%= product.name %></p>
+								</article>
+							</a>
+						</section>
+					</div>
+
+					<form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+							<button type="submit">ELIMINAR</button>
+					</form>
+					<% }) %>
 			</div>
-			<!-- Show the "visited" products -->
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<figure class="product-box_image">
-						<img src="/images/buzos-4.jpg" style="width:50%" style="left: 30%;" alt="imagen de producto">
-					</figure>
-					<article class="product-box_data">
-						<h6>FINAL PRICE</h6>
-						<span>DISCOUNT % OFF</span>
-						<p>PRODUCT NAME</p>
-					</article>
-					<a href="#">Modificar</a>
-					<a href="#">eliminar</a>
-				</section>
-			</div>
-		</div>
-	 </div>
-     <footer>
-        <div>
-            <p>STAY IN TOUCH</p>
-        </div>
+	</main>
 
-        <div class="opciones">
-            <a href="#" class="link"><h4>AYUDA</h4></a>
-            <a href="#" class="link"><h4>ENVIOS</h4></a>
-            <a href="#" class="link"><h4>DEVOLUCIONES</h4></a>
-            <a href="#" class="link"><h4>LOCALES</h4></a>
-        </div>
+	<!-- Footer -->
+    <%- include('../partials/footer') %>
 
-        <div class="opciones">
-            <a href="#" class="link"><h4>TERMINOS Y CONDICIONES</h4></a>
-            <a href="#" class="link"><h4>CONTACTO</h4></a>
-        </div><br>
-
-        <div id="redes" class="opciones">
-            <a href="https://www.instagram.com/" class="link"><h4>INSTAGRAM</h4></a>
-            <h4>-</h4>
-            <a href="https://www.facebook.com" class="link"><h4>FACEBOOK</h4></a>
-        </div>
-    </footer>
-    <script>
-		var collasable_newproduct = document.getElementsByClassName("NewProduct");
-		var i;
-		for (i = 0; i < collasable_newproduct.length; i++) {
-		  collasable_newproduct[i].addEventListener("click", function() {
-		    this.classList.toggle("active");
-		    var content = this.nextElementSibling;
-		    if (content.style.display === "block") {
-		      content.style.display = "none";
-		    } else {
-		      content.style.display = "block";
-		    }
-		  });
-		};
-
-		var coll = document.getElementsByClassName("modifyProduct"); 
-		var x;
-		for (x = 0; x < coll.length; x++) {
-		  coll[x].addEventListener("click", function() {
-		    this.classList.toggle("active");
-		    var content = this.nextElementSibling;
-		    if (content.style.display === "block") {
-		      content.style.display = "none";
-		    } else {
-		      content.style.display = "block";
-		    }
-		  });
-		};
-		
-	</script>
-
-	<script type="text/javascript">
-		// Get the modal
-		var modal = document.getElementById("myModal");
-
-		// Get the button that opens the modal
-		var btn = document.getElementById("myBtn");
-
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-
-		// When the user clicks the button, open the modal 
-		btn.onclick = function() {
-		  modal.style.display = "block";
-		}
-
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() {
-		  modal.style.display = "none";
-		}
-
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-		  if (event.target == modal) {
-		    modal.style.display = "none";
-		  }
-		}
-  </script>
 </body>
 </html>
