@@ -3,15 +3,17 @@
   "id": 1,
   "name": "Chukkas de cuero esparre para hombre",
   "price": 16999,
+  "discount": "20",
   "category": "Hombre",
   "description": "Parte superior de cuero | suela de goma | forros textiles | letras de Lacoste en la lengüeta y marca de cocodrilo de metal tonal en el talón",
   "color": "Black • 02H",
-  "image": "images/productsData/man-chukkas-black.jpg"
+  "image": "man-chukkas-black.jpg"
  },
  {
   "id": 2,
   "name": "Remera de hombre Lacoste SPORT en jersey transpirable de cocodrilo con estampado 3D",
   "price": 7499,
+  "discount": "20",
   "category": "Hombre",
   "description": "Cuello redondo de canalé | mezcla de algodón técnico ultraseco | estampado de cocodrilo en contraste en 3D",
   "color": "White & Marine Blue • 522",
@@ -21,6 +23,7 @@
   "id": 3,
   "name": "Mochila de lona con monograma The Blend para hombre",
   "price": 24999,
+  "discount": "20",
   "category": "Hombre",
   "description": "Bolsillo frontal con cremallera | compartimento para computadora | bolsillos interiores de malla",
   "color": "Noir Gray • H45",
@@ -30,6 +33,7 @@
   "id": 4,
   "name": "Polo de mujer Lacoste Slim Fit en piqué de algodón elástico",
   "price": 10999,
+  "discount": "20",
   "category": "Mujer",
   "description": "Cuello polo de canalé con cuatro botones ajustados | acabados acanalados en los extremos de las mangas | marca de cocodrilo tonal bordada en el pecho",
   "color": "White • 001",
@@ -39,6 +43,7 @@
   "id": 5,
   "name": "Zapatillas De Mujer La Piquée",
   "price": 17999,
+  "discount": "20",
   "category": "Mujer",
   "description": "Empeine textil | suela de goma | cocodrilo verde bordado en el talón",
   "color": "White & Light Pink • 1Y9",
@@ -48,6 +53,7 @@
   "id": 6,
   "name": "Bolso De Hombro De Cuero Con Cierre De Cocodrilo Croco Turn De Mujer",
   "price": 17249,
+  "discount": "20",
   "category": "Mujer",
   "description": "Bolsillo plano exterior | bandolera y solapa de cuero | cierre de cocodrilo",
   "color": "Cinabre • 124",
@@ -56,22 +62,22 @@
  {
   "id": 7,
   "name": "zapatillas reebooks",
-  "description": "descrpicion",
+  "price": "34.45",
   "category": "runner",
+  "description": "descrpicion",
   "colors": "azul",
   "tall": "34",
-  "price": "34.45",
-  "image": "/images/productsData/1646497796258_img_.jpg"
+  "image": "1646497796258_img_.jpg"
  },
  {
   "id": 8,
   "name": "zapatillas",
-  "description": "des",
+  "price": "2344",
   "category": "runner",
+  "description": "des",
   "colors": "azul",
   "tall": "34",
-  "price": "2344",
-  "image": "/images/productsData/1646497901344_img_.png"
+  "image": "1646497901344_img_.png"
  },
  {
   "id": 9,
@@ -82,7 +88,7 @@
   "colors": "negro",
   "size": "x",
   "description": "prueba",
-  "image": "/images/productsData/1646957743480_img_.jpg"
+  "image": "1646957743480_img_.jpg"
  },
  {
   "id": 10,
@@ -93,6 +99,6 @@
   "colors": "rojo",
   "size": "xl",
   "description": "asheee",
-  "image": "/images/productsData/1646958049855_img_.jpg"
+  "image": "1646958049855_img_.jpg"
  }
 ]
