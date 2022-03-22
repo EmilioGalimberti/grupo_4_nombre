@@ -1,102 +1,149 @@
-/* ---- Estilos HEADER MOBILE --- */
-header{
+@font-face {
+    font-family: 'Metropolis-Light';
+    src: url('../fonts/Metropolis-Light.otf') format('opentype');
+}
+
+header {
+    font-family: 'Metropolis-Light';
+    background-color: #141414;
+}
+
+footer {
+    font-family: 'Metropolis-Light';
+    background-color: #141414;
+    color: #a1a1a1;
+    /* font-size: 0.85em; */
+}
+
+/* ---- Estilos HEADER MOBILE FIRST ---- */
+header section.mobile {
+    height: 3.75rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #FFFFFF;
-    border-bottom: #666666 solid 1px;
-    background-color: #131313;
+    padding: 0 1rem;
 }
 
-header section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30%;
+.logo-mobile {
+    height: 1.45em;
+    width: 1.45em;
 }
+
+.menu-mobile {
+    height: 1.45em;
+    width: 1.45em;
+}
+
+.bolsa-mobile {
+    height: 1.45em;
+    width: 1.45em;
+}
+
+header section.desktop {
+    display: none;
+}
+/* ---- //// .... //// ---- */
+
+
+/* ---- Estilos FOOTER MOBILE FIRST ---- */
+
+.footer-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+a {
+    font-size: 0.8125em;
+    text-decoration: none;
+    color: #a1a1a1;
+}
+
+footer div ul {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+footer i {
+    font-weight: bold;
+    font-size: 0.8125em;
+}
+
+section div.margin {
+    margin: 1.25rem;
+}
+
+.button {
+    cursor: pointer;
+    height: 1.625rem;
+    font-size: 0.85em;
+    color: #141414c9;
+    background-color: #6886C5;
+    border: 2.2px solid #55555579;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 0.17rem 0.7rem;
+}
+
+.links-contact {
+    /* width: 100%; */
+    padding: 2rem 0 ;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer input {
+    min-width: 55%;
+    height: 1.33rem;
+    padding-left: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 6px;
+    border: 1px;
+}
+
+input::placeholder {
+    font-size: 0.75em;
+}
+
+/* FORM CONTACT */
+/* .form-contact {
+    width: 450px;
+
+    padding: 5rem 0 1.3rem;
+} */
+
+.text-align {
+    text-align: center;
+}
+
+
+
+.form-margin {
+    margin: 0 0 0.625rem 0;
+}
+
 
 body{
     background-color: #fbfbfd;
 }
 
-div.burger-menu{
-    width: 30%;
-}
-
-div.burger-menu i{
-    background-color: #131313;;
-    color: white;
-    border-radius: 5px;
-    font-size: 20px;
-    height: 20px;
-    width: 20px;
-    margin-left: 10px;
-}
-/* ---- Estilos HEADER MOBILE --- */
-
-header div.desktop{
-    display: none;
-}
-
-/* --- Clases del <FOOTER> --- */
- footer {
-     background-color: #131313;
-     display: flex;
-     flex-wrap: wrap;
-     width: 100%;
-
-}
-
-    footer div i {
-        color: #a1a1a1;
-    }
-    
-footer ul {
-    padding-left: 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    }
-
-    input {
-        min-width: 55%;
-        height: 1.75rem;
-        padding-left: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 6px;
-        border: 1px;
-    }
-
-    footer a {
-        font-size: 1em;
-    }
-    /* --- Clases del <footer> --- 
-   ----     -----         ---- */
-
-.footer-sections {
-    display: flex;
-    flex-wrap: wrap;
+/* .copy{
     width: 100%;
-    justify-content: center;
-}
-
-footer div ul {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-}
-
-.copy{
-    width: 100%;
-}
+} */
 
 .footer-copyright {
     padding: 0.1rem 0;
     background-color: #a1a1a1;
     width: 100%;
-    
+
 }
 
 .social-network {
@@ -105,34 +152,11 @@ footer div ul {
     gap: 0.7rem;
     justify-content: center;
 }
-
-.form-contact {
-    /* width: 450px; */
-
-    padding: 5rem 0 1.3rem;
-}
-
-.links-contact {
-    width: 100%;
-    padding: 5rem 0 1.3rem;
-}
-
+/* 
 .socialnet-margin {
     margin-bottom: 4rem;
     width: 100%;
-}
-
-.text-align {
-    text-align: center;
-}
-
-.margin {
-    margin: 0 0 1rem 0;
-}
-
-.form-margin {
-    margin: 0 0 0.5rem 0;
-}
+} */
 
 .button {
     cursor: pointer;
@@ -143,86 +167,83 @@ footer div ul {
     padding: 0.17rem 0.7rem;
 }
 
-.font-gray {
-    color: #a1a1a1;
+.copyright {
+    padding: 0.5rem;
+    font-size: 0.625em;
+    align-items: center;
+    text-align: center;
+    background-color: #a1a1a1;
+    color: #141414;   
 }
 
 
 @media (min-width: 1024px) {
-    header section.mobile{
-        display: none;
-    }
 
-    /* ---- Estilos HEADER desktop --- */
-    header div.desktop {
-        width: 100%;
-        padding: 20px 60px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #131313;
-    }
-
-    header a {
-        font-size: 1.1em;
-    }
-
-    ul {
-        padding-left: 0;
-        list-style: none;
-        display: flex;
-        align-items: center;
-        gap: 1.3rem;
-    }
-    
     a {
+        font-size: 0.8125em;
         text-decoration: none;
         color: #a1a1a1;
     }
-    
-    /* --- Clases del <header> --- */
-    .nav-register {
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 1.3rem;
+    }
+
+    /* ---- estilos HEADER DESKTOP --- */
+    header section.desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.3rem 3rem;
+    }
+
+    header section.mobile {
+        display: none;
+    }
+
+    .login-register {
         display: flex;
         align-items: center;
         gap: 1.3rem;
     }
-    
-    .logo {
-        width: 48px;
-        height: 48px;
-    }
-    
-    .bolsa {
-        width: 24px;
-        height: 24px;
-    }
-    
-    .lupa {
-        width: 24px;
-        height: 24px;
-    }
-    
-    /* --- Clases del <FOOTER> --- */
-    footer {
-        background-color: #131313;
-        display: block;
+
+    .logo-desktop {
+        height: 2em;
+        width: 2em;
     }
 
-    footer div i {
-        color: #a1a1a1;
+    .bolsa-desktop {
+        height: 1.45em;
+        width: 1.45em;
     }
-    
-    footer ul {
-        padding-left: 0;
-        list-style: none;
+    /* ---- //// .... //// --- */
+
+    /* ---- estilos FOOTER DESKTOP --- */
+    .footer-sections {
         display: flex;
-        align-items: center;
-        gap: 0.5rem;
+        justify-content: space-around;
+        width: auto;
+    }
+
+    footer i {
+        color: #a1a1a1;
+        font-weight: bold;
+        font-size: 0.84375em;
+    }
+
+    footer a {
+        font-size: 0.84375em;
+    }
+
+    footer p {
+        margin: 0;
     }
 
     input {
         min-width: 55%;
-        height: 1.75rem;
+        height: 1.5rem;
         padding-left: 10px;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
@@ -230,28 +251,46 @@ footer div ul {
         border: 1px;
     }
 
-    footer a {
-        font-size: 1em;
+    input::placeholder {
+        font-size: 0.85em;
     }
-    /* --- Clases del <footer> --- 
-   ----     -----         ---- */
+      
 
-    .footer-sections {
-        display: flex;
-        justify-content: space-around;
-        width: auto;
-    }
-
-    footer div ul {
+    footer ul {
         display: flex;
         flex-direction: column;
         margin: 0;
     }
 
-    .footer-copyright {
-        padding: 0.1rem 0;
-        background-color: #a1a1a1;
+    .form-contact {
+        width: 30%;
+        padding: 3.375rem 0 0;
+    }
+
+    .links-contact {
         width: auto;
+        padding: 3.375rem 0 0;
+    }
+
+    .button {
+        cursor: pointer;
+        height: 1.625rem;
+        font-size: 0.85em;
+        color: #141414c9;
+        background-color: #6886C5;
+        border: 2.2px solid #55555579;
+        border-radius: 5px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 0.17rem 0.7rem;
+    }
+
+    .copyright {
+        padding: 0.5rem;
+        font-size: 0.8125em;
+        align-items: center;
+        text-align: center;
+        background-color: #a1a1a1;
+        color: #141414;   
     }
 
     .social-network {
@@ -259,17 +298,6 @@ footer div ul {
         display: flex;
         gap: 0.7rem;
         justify-content: center;
-    }
-
-    .form-contact {
-        /* width: 450px; */
-        width: 30%;
-        padding: 5rem 0 1.3rem;
-    }
-
-    .links-contact {
-        width: auto;
-        padding: 5rem 0 1.3rem;
     }
 
     .socialnet-margin {
@@ -281,24 +309,11 @@ footer div ul {
         text-align: center;
     }
 
-    .margin {
-        margin: 0 0 1rem 0;
+    section div.margin {
+        margin: 0 1.25rem 1.25rem 1.25rem;
     }
 
     .form-margin {
-        margin: 0 0 0.5rem 0;
-    }
-
-    .button {
-        cursor: pointer;
-        border: 2.2px solid #55555579;
-        border-radius: 5px;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        background-color: #6886C5;
-        padding: 0.17rem 0.7rem;
-    }
-
-    .font-gray {
-        color: #a1a1a1;
+        margin-bottom: 0.625rem;
     }
 }

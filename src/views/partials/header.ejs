@@ -1,9 +1,18 @@
 <header>
     <section class="mobile">
-        <div  class="burger-menu">
-            <i class="fas fa-bars"></i>
+        <div>
+            <img class="menu-mobile" src="images/header/menu.png">
         </div>
-        <%if (numero == 0) {%>
+
+        <div>
+            <img class="logo-mobile" src="images/header/logo.png">
+        </div>
+
+        <div>
+            <img class="bolsa-mobile" src="images/header/bolsa-de-compra.png">
+        </div>
+
+        <!-- <%if (numero == 0) {%>
             <%=titulos[0]%>
         <%} %>
         <%if (numero == 1) {%>
@@ -11,31 +20,25 @@
         <%} %>
         <%if (numero == 2) {%>
             <%=titulos[2]%>
-        <%} %>
+        <%} %> -->
     </section>
 
-    <section class="mobile">
-        <div id="logo">
-            <i class="fa-solid fa-shirt"></i>
-        </div>
-    </section>
-    
-    <div class="desktop">
+    <section class="desktop">
         <div>
-            <img class="logo" src="images/header/logo-ejemp.png">
+            <img class="logo-desktop" src="images/header/logo.png">
         </div>
 
         <div>            
             <nav>
                 <ul>
-                    <li><a href="#">Novedades</a></li>
-                    <li><a href="#">Ropa</a></li>
+                    <li><a href="#">Nuevos Ingresos</a></li>
+                    <li><a href="#">Indumentaria</a></li>
                     <li><a href="#">Nosotros</a></li>
                 </ul>
             </nav>
         </div>
         
-        <div class="nav-register">
+        <div class="login-register">
             <nav>
                 <ul>
                     <li><a href="#">Registrarse</a></li>
@@ -44,8 +47,8 @@
             </nav>
 
             <div>
-                <img class="bolsa" src="images/header/bolsa-de-la-compra.png">
+                <img class="bolsa-desktop" src="images/header/bolsa-de-compra.png">
             </div>
         </div>
-    </div>
+    </section>
 </header>
