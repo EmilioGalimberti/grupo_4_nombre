@@ -1,32 +1,14 @@
 [
  {
   "id": 1,
-  "name": "Chukkas de cuero esparre para hombre",
-  "price": 16999,
-  "discount": "20",
-  "category": "Hombre",
-  "description": "Parte superior de cuero | suela de goma | forros textiles | letras de Lacoste en la lengüeta y marca de cocodrilo de metal tonal en el talón",
-  "color": "Black • 02H",
   "image": "man-chukkas-black.jpg"
  },
  {
   "id": 2,
-  "name": "Remera de hombre Lacoste SPORT en jersey transpirable de cocodrilo con estampado 3D",
-  "price": 7499,
-  "discount": "20",
-  "category": "Hombre",
-  "description": "Cuello redondo de canalé | mezcla de algodón técnico ultraseco | estampado de cocodrilo en contraste en 3D",
-  "color": "White & Marine Blue • 522",
   "image": "man-sport-t-shirt-blue-marine.jpg"
  },
  {
   "id": 3,
-  "name": "Mochila de lona con monograma The Blend para hombre",
-  "price": 24999,
-  "discount": "20",
-  "category": "Hombre",
-  "description": "Bolsillo frontal con cremallera | compartimento para computadora | bolsillos interiores de malla",
-  "color": "Noir Gray • H45",
   "image": "man-bag-monogram-noir-gray.jpg"
  },
  {

@@ -1,6 +1,6 @@
 const path = require('path');
 
-let titulos = ['CARRITO', "HOME", "PRODUCTS","SING UP"]
+let titulos = ['CARRITO', "HOME", "PRODUCTS","SING UP", "login"]
 
 module.exports = {
     index: (req,res) =>{
@@ -16,6 +16,6 @@ module.exports = {
         res.render(path.resolve(__dirname, '../views/products/products'),{titulos, "numero":2});
     },
     login:(req,res) =>{
-        res.render(path.resolve(__dirname, '../views/users/login'));
+        res.render(path.resolve(__dirname, '../views/users/login'),{titulos, "numero":4});
     }
 }
