@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 const webRoutes =  require('./routes/webRoutes.js');
-const routesProducts =  require('./routes/routesProducts.js');
+const routesProducts =  require('./routes/productsRoutes.js');
 const PORT = 3050;
 
 app.set('view engine', 'ejs');

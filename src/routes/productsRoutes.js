@@ -23,6 +23,6 @@ router.get('/create', products.formProduct);
 router.post('/', uploadFile.single("image"),products.productCreate); 
 
 // delete one product
-router.delete('/delete/:id', products.destroy); 
+router.post('/delete/:id', products.destroy); 
 
 module.exports = router;

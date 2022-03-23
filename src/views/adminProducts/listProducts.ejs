@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/listProducts.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  <!-- Fuentes -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" /><!-- Logos -->
     <script src="https://kit.fontawesome.com/9f9a3d7540.js" crossorigin="anonymous"></script>
@@ -22,6 +23,7 @@
 		<a href="/products/create">
 			<button onClick="myFunction()"  id="myBtn">Crear producto</button>
 		</a>
+
 		<div class="container products-wrapper">
 			<div class="row">
 				<div class="col-12">
@@ -46,7 +48,7 @@
 						</section>
 					</div>
 
-					<form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+					<form action="/products/delete/<%= product.id %>" method="POST">
 							<button type="submit">ELIMINAR</button>
 					</form>
 					<% }) %>
