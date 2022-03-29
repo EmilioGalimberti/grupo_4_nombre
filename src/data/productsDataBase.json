@@ -53,24 +53,6 @@
  },
  {
   "id": 9,
-  "name": "Remera polo truchi",
-  "price": "1425",
-  "discount": "12",
-  "category": "in-sale",
-  "colors": "negro",
-  "size": "x",
-  "description": "prueba",
   "image": "1646957743480_img_.jpg"
- },
- {
-  "id": 10,
-  "name": "riñomn",
-  "price": "1444",
-  "discount": "13",
-  "category": "visited",
-  "colors": "rojo",
-  "size": "xl",
-  "description": "asheee",
-  "image": "1646958049855_img_.jpg"
  }
 ]
