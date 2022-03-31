@@ -11,11 +11,12 @@
  },
  {
   "id": 5,
+  "prodId": "5",
   "name": "Zapatillas De Mujer La Piquée",
-  "price": 17999,
-  "discount": "20",
-  "category": "Mujer",
-  "description": "Empeine textil | suela de goma | cocodrilo verde bordado en el talón",
+  "price": "5000",
+  "discount": "50",
+  "category": "in-sale",
+  "description": "Empeine textil | suela de goma | cocodrilo verde bordado en el talón, 100% algodon",
   "color": "White & Light Pink • 1Y9",
   "image": "woman-shoes-piquee-whitepink.jpg"
  },
@@ -30,17 +31,6 @@
   "image": "woman-bag-croco-cinabre.jpg"
  },
  {
-  "id": 7,
-  "name": "zapatillas reebooks",
-  "price": "3445",
-  "discount": "20",
-  "category": "runner",
-  "description": "descrpicion",
-  "colors": "azul",
-  "tall": "34",
-  "image": "1646497796258_img_.jpg"
- },
- {
   "id": 8,
   "name": "zapatillas",
   "price": "2344",
@@ -50,9 +40,5 @@
   "colors": "azul",
   "tall": "34",
   "image": "1646497901344_img_.png"
- },
- {
-  "id": 9,
-  "image": "1646957743480_img_.jpg"
  }
 ]

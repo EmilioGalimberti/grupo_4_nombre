@@ -43,14 +43,14 @@
 									<h2><%= toThousand(finalPrice) %></h2>
 									<span><%= product.discount %> %OFF</span>
 									<p><%= product.name %></p>
+									<a href="/products/edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+									<form action="/products/delete/<%= product.id%>?_method=DELETE" method="post">
+											<button type="submit">ELIMINAR</button>
+									</form>
 								</article>
 							</a>
 						</section>
 					</div>
-					<a href="/products/edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
-					<form action="/products/delete/<%= product.id %>" method="POST">
-							<button type="submit">ELIMINAR</button>
-					</form>
 					<% }) %>
 			</div>
 	</main>

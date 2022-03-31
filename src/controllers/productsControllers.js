@@ -20,6 +20,7 @@ const productsControllers = {
     },
     // Create Product and storage method
     productCreate: (req, res) => {
+        res.send(req.body)
         if(req.file.filename){
             let newProduct = {
                 id: products[products.length - 1].id + 1,
@@ -51,14 +52,18 @@ const productsControllers = {
     
     // Update - Method to update
 	update: (req, res) => {
-		let id = req.params.id;
+        
+		let id = req.body.prodId;
 		let productToEdit = products.find(product => product.id == id)
-
+        
+        
 		productToEdit = {
 			id: productToEdit.id,
 			...req.body,
 			image: productToEdit.image,
 		};
+
+
 		
 		let newProducts = products.map(product => {
 			if (product.id == productToEdit.id) {
@@ -68,7 +73,7 @@ const productsControllers = {
 		})
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-		res.redirect('/products');
+		res.render('adminProducts/listProducts', {products, toThousand, titulos, "numero": 5});
 	},
 
     // delte one product form database

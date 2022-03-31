@@ -24,9 +24,11 @@ router.post('/', uploadFile.single("image"),productsControllers.productCreate);
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', productsControllers.edit); 
-router.post('/edit/:id', productsControllers.update); 
+router.post('/update', uploadFile.single("image"),productsControllers.update); 
 
 // delete one product
-router.post('/delete/:id', productsControllers.destroy); 
+router.delete('/delete/:id', productsControllers.destroy); 
+
+
 
 module.exports = router;
