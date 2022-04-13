@@ -3,7 +3,8 @@ const express = require("express");
 const app = express();
 
 const webRoutes =  require('./routes/webRoutes.js');
-const routesProducts =  require('./routes/productsRoutes.js');
+const productsRoutes =  require('./routes/productsRoutes.js');
+const usersRoutes =  require('./routes/productsRoutes.js');
 const PORT = 3050;
 
 app.set('view engine', 'ejs');
@@ -26,7 +27,8 @@ app.use(methodOverride("_method"));
 
 // RUTAS QUE SE USAN
 app.use("/", webRoutes);
-app.use("/products", routesProducts);
+app.use("/products", productsRoutes);
+app.use("/users", usersRoutes);
 
 
 
