@@ -4,7 +4,7 @@
     "firstName": "Lucas",
     "lastName": "Oliveros Pagotto",
     "email": "o.pagotto.lucas@gmail.com",
-    "contraseña": "password",
+    "password": "password",
     "categoría": "admin",
     "imagen": "images/userData/Luks.jpg"
  },
@@ -13,7 +13,7 @@
     "firstName": "Emilio",
     "lastName": "Galimberti",
     "email": "galimbertiemilio@gmail.com",
-    "contraseña": "123456",
+    "password": "123456",
     "categoría": "admin",
     "imagen": "images/userData/Emilio.jpg"
  }

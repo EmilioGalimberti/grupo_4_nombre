@@ -4,13 +4,15 @@ const app = express();
 
 const webRoutes =  require('./routes/webRoutes.js');
 const productsRoutes =  require('./routes/productsRoutes.js');
-const usersRoutes =  require('./routes/productsRoutes.js');
+//const usersRoutes =  require('./routes/usersRoutes.js');
 const PORT = 3050;
+
+
+
+app.use(express.static(path.resolve(__dirname, '../public')));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
-
-app.use(express.static(path.resolve(__dirname, '../public')));
 
 app.use(express.urlencoded({extended: true})); //Esto es para formData
 app.use(express.json())
@@ -28,7 +30,7 @@ app.use(methodOverride("_method"));
 // RUTAS QUE SE USAN
 app.use("/", webRoutes);
 app.use("/products", productsRoutes);
-app.use("/users", usersRoutes);
+//app.use("/users", usersRoutes);
 
 
 

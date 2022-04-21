@@ -33,6 +33,10 @@
         <div class="login-register">
             <nav>
                 <ul>
+                    <% if(typeof email !== 'undefined') {%>
+    
+                        <li><p style="color: white;"><%= email%></h1>   </p></li>
+                    <% } %>
                     <li><a href="#">Registrarse</a></li>
                     <li><a href="#">Iniciar sesión</a></li>
                 </ul>

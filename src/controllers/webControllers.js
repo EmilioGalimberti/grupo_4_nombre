@@ -1,6 +1,6 @@
 const path = require('path');
 
-let titulos = ['CARRITO', "HOME", "PRODUCTS","SING UP", "login"]
+let titulos = ['CARRITO', "HOME", "PRODUCTS","SING UP", "login"];
 
 module.exports = {
     index: (req,res) =>{
