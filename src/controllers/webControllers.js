@@ -1,5 +1,5 @@
 const path = require('path');
-
+const session = require('express-session');
 let titulos = ['CARRITO', "HOME", "PRODUCTS","SING UP", "login"];
 
 module.exports = {
@@ -7,7 +7,8 @@ module.exports = {
         res.render(path.resolve(__dirname, '../views/web/index'),{titulos, "numero":1});
     },
     carrito: (req,res) =>{
-        res.render(path.resolve(__dirname, '../views/products/productCart'),{titulos, "numero":0});
+        let email = session.email;
+        res.render(path.resolve(__dirname, '../views/products/productCart'),{titulos, "numero":0, email});
     },
     detail:(req,res) =>{
         res.render(path.resolve(__dirname, '../views/products/productDetail'));

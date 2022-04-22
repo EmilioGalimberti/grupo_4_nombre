@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const session = require('express-session');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -11,7 +12,8 @@ let titulos = ['CARRITO', "HOME", "PRODUCTS","SING UP",]
 const productsControllers = {
     // show all products
     listProducts:(req, res) =>{
-        res.render('adminProducts/listProducts', {products, toThousand, titulos, "numero": 5});
+		let email = session.email;
+        res.render('adminProducts/listProducts', {products, toThousand, titulos, "numero": 5, email});
     },
 
     //Form create
