@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../css/productsForms.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  <!-- Fuentes -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" /><!-- Logos -->
+    <script src="https://kit.fontawesome.com/9f9a3d7540.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	
+	<%- include('../partials/header') %>
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h1 class="products-title">Formulario de registro de usuarios</h1>
+			</div>
+		</div>
+		<div class="col-12">
+			<form action="/register" method="post" enctype="multipart/form-data"> <!--Permite enviar un form con archivo adjunto por el enctype-->
+				<div class="row product-detail">
+					<div class="col-12 col-md-6">
+						<label for="name" class="form-label">Ingrese nombre y apellidoo</label>
+						<input type="text" id="name" name="name" placeholder="Ej: Alexandra Salgán" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="lastName" class="form-label">Ingrese nombre de usuario</label>
+						<input type="text" id="lastName" name="lastName" placeholder="Ej: Alexandra Salgán" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="email" class="form-label">Ingrese email</label>
+						<input type="text" id="email" name="email" placeholder="Ej: AlexandraSalgán@gmail.com" class="form-input">
+					</div>
+                    
+                    <div class="col-12 col-md-6">
+						<label for="password" class="form-label">contraseña</label>
+						<input  type="password" id="password" name="password" class="inputText" placeholder="Ingrese contraseña" />
+					</div>
+                    <div class="col-12 col-md-6">
+						<label for="confirm-password" class="form-label">confirme contraseña</label>
+						<input  type="password" id="confirm-password" name="confirm_password" class="inputText" placeholder="Confirme contraseña" />
+					</div>
+
+					<div class="col-12 col-md-6">
+						<label for="image" class="form-label">elegi y subi tu foto de perfil de usuario</label>
+						<input type="file" id="image" name="image" placeholder="SUBIR FOTO" class="form-input"><!--Carga de un solo archivo-->
+					</div>
+					<div class="col-12">
+						<button type="submit" class="buy-now-button">registrar usuario</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+	<!-- /todos los productos -->
+
+	<%- include('../partials/footer') %>
+</body>	
+</html>

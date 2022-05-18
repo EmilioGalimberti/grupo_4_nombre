@@ -1,20 +1,49 @@
 [
  {
-    "id": 1,
-    "firstName": "Lucas",
-    "lastName": "Oliveros Pagotto",
-    "email": "o.pagotto.lucas@gmail.com",
-    "password": "password",
-    "categoría": "admin",
-    "imagen": "images/userData/Luks.jpg"
+  "id": 1,
+  "firstName": "Lucas",
+  "lastName": "Oliveros Pagotto",
+  "email": "o.pagotto.lucas@gmail.com",
+  "password": "password",
+  "categoría": "admin",
+  "imagen": "images/userData/Luks.jpg"
  },
  {
-    "id": 2,
-    "firstName": "Emilio",
-    "lastName": "Galimberti",
-    "email": "galimbertiemilio@gmail.com",
-    "password": "123456",
-    "categoría": "admin",
-    "imagen": "images/userData/Emilio.jpg"
+  "id": 2,
+  "firstName": "Emilio",
+  "lastName": "Galimberti",
+  "email": "galimbertiemilio@gmail.com",
+  "password": "123456",
+  "categoría": "admin",
+  "imagen": "images/userData/Emilio.jpg"
+ },
+ {
+  "id": 3,
+  "password": "verf",
+  "name": [
+   "Establecimiento Piedra Pintada",
+   "hola hola ",
+   "a@gmail.com"
+  ],
+  "confirm_password": "verf",
+  "image": "/images/usersData/1652744269199_img_.JPG"
+ },
+ {
+  "id": 4,
+  "password": "abcd",
+  "name": [
+   "hola hola ",
+   "hola hola ",
+   "a@gmail.com"
+  ],
+  "confirm_password": "abcd",
+  "image": "/images/usersData/1652744454115_img_.JPG"
+ },
+ {
+  "id": 5,
+  "lastName": "hola",
+  "email": "hola@gmail.com",
+  "password": "$2a$08$IAKnrdtWAX55eYNXdxct0.CvWfBM6xW6lJCbCtJjygkq/v3465UBW",
+  "image": "/images/usersData/1652834125369_img_.JPG"
  }
 ]
