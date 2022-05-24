@@ -1,21 +1,10 @@
 [
  {
-  "id": 4,
-  "name": "Polo de mujer Lacoste Slim Fit en piqué de algodón elástico",
-  "price": 10999,
-  "discount": "20",
-  "category": "Mujer",
-  "description": "Cuello polo de canalé con cuatro botones ajustados | acabados acanalados en los extremos de las mangas | marca de cocodrilo tonal bordada en el pecho",
-  "color": "White • 001",
-  "image": "woman-polo-slimfit-white.jpg"
- },
- {
   "id": 5,
-  "prodId": "5",
   "name": "Zapatillas De Mujer La Piquée",
   "price": "5000",
   "discount": "50",
-  "category": "in-sale",
+  "category": "calzado",
   "description": "Empeine textil | suela de goma | cocodrilo verde bordado en el talón, 100% algodon",
   "color": "White & Light Pink • 1Y9",
   "image": "woman-shoes-piquee-whitepink.jpg"
@@ -31,25 +20,23 @@
   "image": "woman-bag-croco-cinabre.jpg"
  },
  {
-  "id": 8,
-  "name": "zapatillas",
-  "price": "2344",
-  "discount": "20",
-  "category": "runner",
-  "description": "des",
-  "colors": "azul",
-  "tall": "34",
-  "image": "1646497901344_img_.png"
- },
- {
-  "id": 9,
-  "name": "Remera polo truchi",
-  "price": "1425",
-  "discount": "12",
-  "category": "in-sale",
-  "colors": "negro",
-  "size": "x",
-  "description": "prueba",
-  "image": "1646957743480_img_.jpg"
- }
+    "id": 7,
+    "name": "Bolso De Hombro De Cuero Con Cierre De Cocodrilo Croco Turn De Mujer",
+    "price": 17249,
+    "discount": "20",
+    "category": "Mujer",
+    "description": "Bolsillo plano exterior | bandolera y solapa de cuero | cierre de cocodrilo",
+    "color": "Cinabre • 124",
+    "image": "woman-bag-croco-cinabre.jpg"
+   }, 
+   {
+    "id": 8,
+    "name": "Bolso De Hombro De Cuero Con Cierre De Cocodrilo Croco Turn De Mujer",
+    "price": 17249,
+    "discount": "20",
+    "category": "Mujer",
+    "description": "Bolsillo plano exterior | bandolera y solapa de cuero | cierre de cocodrilo",
+    "color": "Cinabre • 124",
+    "image": "woman-bag-croco-cinabre.jpg"
+   }
 ]
