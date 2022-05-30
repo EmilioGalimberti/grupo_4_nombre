@@ -10,7 +10,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.DATE
         },
         payment_method: {
-            type: dataTypes.VARCHAR
+            type: dataTypes.TEXT
         }
     };
     let config = {
