@@ -13,7 +13,23 @@ router.get('/carrito', webControllers.carrito);
 router.get('/detail', webControllers.detail);
 
 
+
+const storage = multer.diskStorage({
+    destination: function(req, res, cb){
+        cb(null, path.join(__dirname, "../../public/images/usersData"))
+    },
+    filename: function (req, file, cb){
+        cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`)
+    }
+});
+const uploadFile = multer({storage});
+
+router.get('/register',usersControllers.register);
+router.post('/register', uploadFile.single("image"),usersControllers.userCreate);
+
+
+router.post('/', userMidd, usersControllers.acceso)
 router.get('/login', userMidd.acces,webControllers.login);
-router.post('/', userMidd.logueo, usersControllers.acceso)
+
 
 module.exports = router;

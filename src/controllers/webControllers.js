@@ -18,5 +18,9 @@ module.exports = {
     },
     login:(req,res) =>{
         res.render(path.resolve(__dirname, '../views/users/login'),{titulos, "numero":4});
+    },
+    register:(req,res) =>{
+        res.render(path.resolve(__dirname, '../views/users/register'),{titulos, "numero":4});
     }
+
 }
