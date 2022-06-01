@@ -2,6 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const session = require('express-session');
 
+const db = require('../database/models');
+const sequelize = db.sequelize;
+
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -13,7 +16,11 @@ const productsControllers = {
     // show all products
     listProducts:(req, res) =>{
 		let email = session.email;
-        res.render('adminProducts/listProducts', {products, toThousand, titulos, "numero": 5, email});
+        //res.render('adminProducts/listProducts', {products, toThousand, titulos, "numero": 5, email});
+        db.Product.findAll()
+            .then(products => {
+                res.send(products)
+            })
     },
 
     //Form create
