@@ -31,11 +31,14 @@ module.exports = (sequelize, dataTypes) => {
     };
     const User = sequelize.define(alias, cols, config)
 
-    /*Product.associate = function(models){
-        Product.hasOne(models.ProductDetail, {
-            as:"products_detail",
-            foreignKey: "id_product_detail"
+    User.associate = function(models){
+        User.belongsToMany(models.Product, {
+            as:"product",
+            through: "users_products",
+            foreignKey: "id_user",
+            otherKey: "id_product",
+            timestamps: false
         });
-    }*/
+    }
     return User
 }

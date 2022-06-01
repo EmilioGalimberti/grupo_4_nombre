@@ -17,9 +17,9 @@ const productsControllers = {
     listProducts:(req, res) =>{
 		let email = session.email;
         //res.render('adminProducts/listProducts', {products, toThousand, titulos, "numero": 5, email});
-        db.Product.findAll()
-            .then(products => {
-                res.send(products)
+        db.User.findAll()
+            .then(users => {
+                res.send(users)
             })
     },
 
