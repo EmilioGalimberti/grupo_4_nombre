@@ -16,10 +16,9 @@ const productsControllers = {
     // show all products
     listProducts:(req, res) =>{
 		let email = session.email;
-        //res.render('adminProducts/listProducts', {products, toThousand, titulos, "numero": 5, email});
-        db.User.findAll()
-            .then(users => {
-                res.send(users)
+        db.Product.findAll()
+            .then(products => {
+                res.render('adminProducts/listProducts', {products, toThousand, titulos, "numero": 5, email})
             })
     },
 
@@ -27,36 +26,53 @@ const productsControllers = {
     formProduct:(req, res) =>{
         res.render('adminProducts/productsForms',{titulos, "numero":4});
     },
+
     // Create Product and storage method
     productCreate: (req, res) => {
-        res.send(req.body)
-        if(req.file.filename){
+
+            /*
             let newProduct = {
                 id: products[products.length - 1].id + 1,
                 ...req.body,
                 image: "/images/productsData/"+req.file.filename
             };
             products.push(newProduct);
-            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));*/
+
+            db.Product.create({ 
+                name: req.body.name,
+                price:req.body.price,
+                discount:req.body.discount,
+                color: req.body.color,
+                description:req.body.description,
+                image: req.body.image,
+                brand: req.body.brand,
+                size: req.body.size,
+                category: req.body.category
+            });
             res.redirect('/products');
-        }
-        else{
-            let newProduct = {
+
+            /*
+                let newProduct = {
                 id: products[products.length - 1].id + 1,
                 ...req.body,
                 image: "/images/productsData/default-image.png"
             };
             products.push(newProduct);
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-            res.redirect('/products');   
-        }  
-    },
+            res.redirect('/products');
+            */ 
+        },
     
     //form edit
     edit: (req, res) => {
 		let id = req.params.id
-		let productToEdit = products.find(product => product.id == id)
-		res.render('adminProducts/product-edit-form', {productToEdit})
+        db.Product.findByPk(id)
+            .then(productToEdit => {
+                res.render('adminProducts/product-edit-form', {productToEdit})
+            })
+		//let productToEdit = products.find(product => product.id == id)
+		//res.render('adminProducts/product-edit-form', {productToEdit})
 	},
     
     // Update - Method to update
