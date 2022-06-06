@@ -36,7 +36,7 @@
 						<section class="product-box">
 							<a href="/products/detail/<%= product.id %>">
 								<figure class="product-box_image">
-									<img src="/images/productsData/<%= product.image %>" alt="imagen de producto" width="250px">
+									<img src="<%= product.image %>" alt="imagen de producto" width="250px">
 								</figure>
 								<article class="product-box_data">
 									<h2 class="precio">$<%= toThousand(finalPrice) %></h2>

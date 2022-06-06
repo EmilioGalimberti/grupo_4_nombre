@@ -20,7 +20,7 @@ router.get('/', productsControllers.listProducts);
 
 // create one product
 router.get('/create', productsMidd.acces, productsControllers.formProduct);
-router.post('/', uploadFile.single("image"),productsControllers.productCreate); 
+router.post('/', uploadFile.single("image"), productsControllers.productCreate); 
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', productsMidd.acces, productsControllers.edit); 

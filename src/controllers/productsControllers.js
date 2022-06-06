@@ -30,38 +30,18 @@ const productsControllers = {
     // Create Product and storage method
     productCreate: (req, res) => {
 
-            /*
-            let newProduct = {
-                id: products[products.length - 1].id + 1,
-                ...req.body,
-                image: "/images/productsData/"+req.file.filename
-            };
-            products.push(newProduct);
-            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));*/
-
             db.Product.create({ 
                 name: req.body.name,
                 price:req.body.price,
                 discount:req.body.discount,
                 color: req.body.color,
                 description:req.body.description,
-                image: req.body.image,
+                image: "/images/productsData/"+req.file.filename,
                 brand: req.body.brand,
                 size: req.body.size,
                 category: req.body.category
             });
             res.redirect('/products');
-
-            /*
-                let newProduct = {
-                id: products[products.length - 1].id + 1,
-                ...req.body,
-                image: "/images/productsData/default-image.png"
-            };
-            products.push(newProduct);
-            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-            res.redirect('/products');
-            */ 
         },
     
     //form edit
@@ -109,6 +89,5 @@ const productsControllers = {
 		res.redirect('/products');
 	}
 };
-
 
 module.exports = productsControllers;
