@@ -21,7 +21,7 @@ const usersControllers = {
 				res.render(path.resolve(__dirname, '../views/web/index'),{titulos, "numero":1, email});
 		},
 		register:(req, res) =>{
-			res.render('users/register',{titulos, "numero":4});
+			res.render('users/register',{users,toThousand,titulos, "numero":4});
 		},
 		userCreate: (req, res) => {
 			if(req.file.filename){
@@ -57,7 +57,45 @@ const usersControllers = {
 				fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
 				res.redirect('/users');   
 			}  
-		}
+		},
+		//form edit users
+		editUser:(req,res)=>{
+			let id=req.params.id
+			db.User.findByPk(id)
+            .then(userToEdit => {
+                res.render('users/user-edit-form', {userToEdit})
+            })
+		},
+		// Update - Method to update
+	update: (req, res) => {
+        
+		let id = req.body.userId;
+		let userToEdit = users.find(user => user.id == id)
+        
+        
+		userToEdit = {
+			id: userToEdit.id,
+			...req.body,
+			image: userToEdit.image,
+		};
+
+		let newUsers = users.map(user => {
+			if (user.id == userToEdit.id) {
+				return user = {...userToEdit};
+			}
+			return user;
+		})
+
+		fs.writeFileSync(usersFilePath, JSON.stringify(newUsers, null, ' '));
+	},
+	destroy : (req, res) => {
+		let id = req.params.id;
+		let finalUser = users.filter(user => user.id != id);
+		fs.writeFileSync(usersFilePath, JSON.stringify(finalUser, null, ' '));
+		res.redirect('/');
+	}
+
+
 		
 }
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../css/productsForms.css" rel="stylesheet">
@@ -15,44 +15,46 @@
 </head>
 <body>
 	
+	<!-- Header -->
 	<%- include('../partials/header') %>
+	<!-- /Header -->
+
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h1 class="products-title">Formulario de registro de usuarios</h1>
+				<h2 class="products-title">Estás editando: <i><%= userToEdit.name %></i></h2>
 			</div>
 		</div>
 		<div class="col-12">
-			<form action="/register" method="post" enctype="multipart/form-data"> <!--Permite enviar un form con archivo adjunto por el enctype-->
+			<form action="/users/update" method="post" enctype="multipart/form-data"> <!--Permite enviar un form con archivo adjunto por el enctype-->
+				<input id="userId" name="userId" type="hidden" value="<%= userToEdit.id%>">
 				<div class="row product-detail">
 					<div class="col-12 col-md-6">
-						<label for="name" class="form-label">Ingrese nombre y apellido</label>
-						<input type="text" id="name" name="name" placeholder="Ej: Alexandra Salgán" class="form-input">
+						<label for="name" class="form-label">Nombre</label>
+						<input type="text" id="name" name="name" placeholder="Ej: Alexandra Salgán" class="form-input" value="<%= userToEdit.name%>">
 					</div>
 					<div class="col-12 col-md-6">
-						<label for="lastName" class="form-label">Ingrese nombre de usuario</label>
-						<input type="text" id="lastName" name="lastName" placeholder="Ej: Alexandra Salgán" class="form-input">
+						<label for="lastName" class="form-label"> nombre de usuario</label>
+						<input type="text" id="lastName" name="lastName" placeholder="Ej: Alexandra Salgán" class="form-input" value="<%= userToEdit.lastName%>">
 					</div>
 					<div class="col-12 col-md-6">
-						<label for="email" class="form-label">Ingrese email</label>
-						<input type="text" id="email" name="email" placeholder="Ej: AlexandraSalgán@gmail.com" class="form-input">
+						<label for="email" class="form-label">email</label>
+						<input type="number" id="discount" name="discount" placeholder="Ej: 15" class="form-input" value="<%= userToEdit.email%>">
 					</div>
-                    
                     <div class="col-12 col-md-6">
 						<label for="password" class="form-label">contraseña</label>
-						<input  type="password" id="password" name="password" class="form-input" placeholder="Ingrese contraseña" />
+						<input  type="password" id="password" name="password" class="form-input" placeholder="Ingrese contraseña" value="<%= userToEdit.password%>">
 					</div>
                     <div class="col-12 col-md-6">
-						<label for="password" class="form-label"> confirme contraseña</label>
-						<input  type="password" id="password" name="password" class="form-input" placeholder="Ingrese contraseña" />
+						<label for="password" class="form-label">confirme contraseña</label>
+						<input  type="password" id="password" name="password" class="form-input" placeholder="Ingrese contraseña" value="<%= userToEdit.password%>">
 					</div>
-
-					<div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6">
 						<label for="image" class="form-label">elegi y subi tu foto de perfil de usuario</label>
 						<input type="file" id="image" name="image" placeholder="SUBIR FOTO" class="form-input"><!--Carga de un solo archivo-->
 					</div>
 					<div class="col-12">
-						<button type="submit" class="buy-now-button">registrar usuario</button>
+						<button type="submit" class="buy-now-button">Editar Usuario</button>
 					</div>
 				</div>
 			</form>
@@ -61,6 +63,8 @@
 	</div>
 	<!-- /todos los productos -->
 
+	<!-- footer -->
 	<%- include('../partials/footer') %>
+	<!-- /footer -->
 </body>	
 </html>

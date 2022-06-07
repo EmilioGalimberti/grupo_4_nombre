@@ -30,5 +30,9 @@ router.post('/register', uploadFile.single("image"),usersControllers.userCreate)
 router.post('/', userMidd.logueo, usersControllers.acceso)
 router.get('/login', userMidd.acces,webControllers.login);
 
+ 
+router.get('/edit/:id', userMidd.acces, usersControllers.editUser); 
+router.post('/update', uploadFile.single("image"),usersControllers.update);
+
 
 module.exports = router;
