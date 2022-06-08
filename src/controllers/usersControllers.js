@@ -90,13 +90,9 @@ const usersControllers = {
 	},
 	destroy : (req, res) => {
 		let id = req.params.id;
-		let finalUser = users.filter(user => user.id != id);
-		fs.writeFileSync(usersFilePath, JSON.stringify(finalUser, null, ' '));
+        db.Product.destroy({where:{id: id}})
 		res.redirect('/');
 	}
-
-
-		
 }
 
 module.exports = usersControllers;

@@ -59,33 +59,27 @@ const productsControllers = {
 	update: (req, res) => {
         
 		let id = req.body.prodId;
-		let productToEdit = products.find(product => product.id == id)
+		//let productToEdit = db.Product.findByPk(id)
         
+        db.Product.update({ 
+            name: req.body.name,
+            price:req.body.price,
+            discount:req.body.discount,
+            color: req.body.color,
+            description:req.body.description,
+            brand: req.body.brand,
+            size: req.body.size,
+            category: req.body.category
+        },
+        {where: {id: id}}
+        );
+        res.redirect('/products');
+    },
         
-		productToEdit = {
-			id: productToEdit.id,
-			...req.body,
-			image: productToEdit.image,
-		};
-
-
-		
-		let newProducts = products.map(product => {
-			if (product.id == productToEdit.id) {
-				return product = {...productToEdit};
-			}
-			return product;
-		})
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-		res.render('adminProducts/listProducts', {products, toThousand, titulos, "numero": 5});
-	},
-
     // delte one product form database
     destroy : (req, res) => {
 		let id = req.params.id;
-		let finalProducts = products.filter(product => product.id != id);
-		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
+        db.Product.destroy({where:{id: id}})
 		res.redirect('/products');
 	}
 };

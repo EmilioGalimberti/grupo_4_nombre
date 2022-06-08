@@ -20,23 +20,23 @@
   "image": "woman-bag-croco-cinabre.jpg"
  },
  {
-    "id": 7,
-    "name": "Bolso De Hombro De Cuero Con Cierre De Cocodrilo Croco Turn De Mujer",
-    "price": 17249,
-    "discount": "20",
-    "category": "Mujer",
-    "description": "Bolsillo plano exterior | bandolera y solapa de cuero | cierre de cocodrilo",
-    "color": "Cinabre • 124",
-    "image": "woman-bag-croco-cinabre.jpg"
-   }, 
-   {
-    "id": 8,
-    "name": "Bolso De Hombro De Cuero Con Cierre De Cocodrilo Croco Turn De Mujer",
-    "price": 17249,
-    "discount": "20",
-    "category": "Mujer",
-    "description": "Bolsillo plano exterior | bandolera y solapa de cuero | cierre de cocodrilo",
-    "color": "Cinabre • 124",
-    "image": "woman-bag-croco-cinabre.jpg"
-   }
+  "id": 7,
+  "name": "Bolso De Hombro De Cuero Con Cierre De Cocodrilo Croco Turn De Mujer",
+  "price": 17249,
+  "discount": "20",
+  "category": "Mujer",
+  "description": "Bolsillo plano exterior | bandolera y solapa de cuero | cierre de cocodrilo",
+  "color": "Cinabre • 124",
+  "image": "woman-bag-croco-cinabre.jpg"
+ },
+ {
+  "id": 8,
+  "name": "Bolso De Hombro De Cuero Con Cierre De Cocodrilo Croco Turn De Mujer",
+  "price": 17249,
+  "discount": "20",
+  "category": "Mujer",
+  "description": "Bolsillo plano exterior | bandolera y solapa de cuero | cierre de cocodrilo",
+  "color": "Cinabre • 124",
+  "image": "woman-bag-croco-cinabre.jpg"
+ }
 ]
