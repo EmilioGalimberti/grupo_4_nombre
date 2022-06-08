@@ -27,7 +27,7 @@ html,
 body {
   min-height: 100vh;
   margin: 0;
-  font-size: 10px;
+  
 }
 
 body {
@@ -47,6 +47,9 @@ body {
   overflow: hidden;
 }
 
+div form{
+  font-size: 10px;
+}
 
 .form-label {
   display: inline-block;
