@@ -18,18 +18,19 @@
     <!-- Header -->
     <%- include('../partials/header') %>
     
-	<div class="cotentForm">
+	<section class="cotentForm">
 		<form action="/" method="POST" class="FormLogin">
             <% if(typeof err !== 'undefined') {%>
     
                 <h1 style="color: blue;"><%= err%></h1>   
             <% } %>
-     	    <div class="formGroupLabels">
+     	    <div class="email">
      			<label for="email" class="formLabelEmail">Direccion de Email</label>
-     			<label for="password" class="formLabelPass">Contraseña</label>
+     			<input type="text" name="email" id="email" class="formInputEmail" placeholder="Escribe tu email">
+                 
      	    </div>
-     	    <div class="formGroupInputs">
-				<input type="text" name="email" id="email" class="formInputEmail" placeholder="Escribe tu email">
+     	    <div class="password">
+				<label for="password" class="formLabelPass">Contraseña</label>
 				<input type="password" name="pass" id="pass" class="formInputPass" placeholder="Escribe tu Contraseña">
      	    </div>
      	    <input type="checkbox" name="remember" id="remember" value="Recordar">
@@ -48,7 +49,11 @@
                Iniciar sesion con Facebook
               </button>
 		</form>	
-	</div>
+	</section>
     <%- include('../partials/footer') %>
+
+    <script src="/js/validation/login.js">
+        console.log('jsfront')
+    </script>
 </body>
 </html>

@@ -7,7 +7,7 @@ body{
     margin: 0%;
     background-color: #131313;
 }
-.cotentForm{
+section .cotentForm{
 	display: flex;
     justify-content: center;
 }
@@ -18,7 +18,7 @@ body{
 	width: 50%;
 	color: white;
 }
-.formGroupLabels{
+.email{
 	margin-top: 2%;
 	margin-bottom: 1%;
 }
@@ -31,7 +31,7 @@ body{
 	margin-left: 11%;
 }
 
-.formGroupInputs{
+.password{
 	margin-bottom: 2%;
 }
 .formInputEmail{
