@@ -25,6 +25,7 @@ const usersControllers = {
 		},
 		userCreate: (req, res) => {
 			if(req.file.filename){
+
 				const hash = bcrypt.hashSync(req.body.password, 8);
 				/*let newUser = {
 					id: users[users.length - 1].id + 1,
@@ -36,18 +37,19 @@ const usersControllers = {
 				};
 				users.push(newUser);
 				fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));*/
-
+				res.send(req.body.first_Name);
 				db.User.create({ 
-					first_Name: req.body.firstName,
-                 	last_Name:req.body.lastName,
+					first_Name: "gaston",
+                 	last_Name:req.body.email,
                  	email:req.body.email,
                  	password: hash,
 					category: 1,  // usuario comun: 1
 					image: "/images/usersData/"+req.file.filename
 				});
+				console.log(user.username);
 				res.redirect('/');
 			}
-			else{
+			/*else{
 				let newUser = {
 					id: users[users.length - 1].id + 1,
 					...req.body,
@@ -55,14 +57,23 @@ const usersControllers = {
 				};
 				users.push(newUser);
 				fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+				db.User.create({ 
+					first_Name: req.body.first_Name,
+                 	last_Name:req.body.last_Name,
+                 	email:req.body.email,
+                 	password: hash,
+					category: 1,  // usuario comun: 1
+					image: "/images/usersData/default-image.png"
+				});
 				res.redirect('/users');   
-			}  
+			}  */
 		},
 		//form edit users
 		editUser:(req,res)=>{
 			let id=req.params.id
 			db.User.findByPk(id)
             .then(userToEdit => {
+
                 res.render('users/user-edit-form', {userToEdit})
             })
 		},
