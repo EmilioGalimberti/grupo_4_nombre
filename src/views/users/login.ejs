@@ -11,27 +11,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  <!-- Fuentes -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" /><!-- Logos -->
-    <script src="https://kit.fontawesome.com/9f9a3d7540.js" crossorigin="anonymous"></script>
+   
     <title>Login</title>
 </head>
 <body>
     <!-- Header -->
     <%- include('../partials/header') %>
-    
+    <h2 class="title">My account</h2>
 	<section class="cotentForm">
-		<form action="/" method="POST" class="FormLogin">
-            <% if(typeof err !== 'undefined') {%>
-    
-                <h1 style="color: blue;"><%= err%></h1>   
-            <% } %>
+        <form action="/" method="POST" class="FormLogin">
+            
      	    <div class="email">
-     			<label for="email" class="formLabelEmail">Direccion de Email</label>
-     			<input type="text" name="email" id="email" class="formInputEmail" placeholder="Escribe tu email">
+     			<input class='inputForms' type="text" name="email" id="email" placeholder="Escribe tu email">
                  
      	    </div>
      	    <div class="password">
-				<label for="password" class="formLabelPass">Contraseña</label>
-				<input type="password" name="pass" id="pass" class="formInputPass" placeholder="Escribe tu Contraseña">
+				<input class='inputForms' type="password" name="pass" id="pass"  placeholder="Escribe tu Contraseña">
      	    </div>
      	    <input type="checkbox" name="remember" id="remember" value="Recordar">
               <label for="remember">recordar contraseseña</label>  
@@ -50,10 +45,15 @@
               </button>
 		</form>	
 	</section>
+
+    <div class="bar errors">
+        <ul></ul>
+    </div>
+
     <%- include('../partials/footer') %>
 
-    <script src="/js/validation/login.js">
-        console.log('jsfront')
+    <script src="/jsValidations/validationLogin.js">
+        
     </script>
 </body>
 </html>

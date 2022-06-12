@@ -1,66 +1,103 @@
-.divHeaderCenter{
-	display: flex;
-    justify-content: center;
-}
 
 body{
-    margin: 0%;
-    background-color: #131313;
+	background: #131313;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+	margin: 0;
+	width: 100%;
 }
-section .cotentForm{
+
+h2.title{
+	color: #6249c8;
+	line-height: 30px;
+    margin: 0 0 3px;
+    padding: 10px 0;
+    text-align: center;
+	font-size: 30px;
+}
+
+
+section.cotentForm{
+	text-align: center;
+	width: 90%;
 	display: flex;
-    justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	justify-content: center;
+	border: 2px solid #6249c8;
+  	border-radius: 20px;
 }
 
 .FormLogin{
-	border: 2px solid #c1e9f5; 
-	border-radius: 15px;
-	width: 50%;
+	width: 70%;
+	color: #a1a1a1;
+	
+}
+
+input.inputForms{
 	color: white;
-}
-.email{
-	margin-top: 2%;
-	margin-bottom: 1%;
-}
-.formLabelEmail{
-	margin-right: 10%;
-	margin-left: 10%;
-}
-
-.formLabelPass{
-	margin-left: 11%;
-}
-
-.password{
-	margin-bottom: 2%;
-}
-.formInputEmail{
-	margin-right: 10%;
-	margin-left: 10%;
+	width: 65%;
+	padding: 20px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: none;
+    border-bottom: 2px solid #6249c8;
+	background: none;
+	transition: ease-in-out, width .35s ease-in-out;
 }
 
 
-.formInputPass{
-	margin-left: 2%;
+
+input.inputForms:focus-visible{
+	
+	outline: none;
+	border-bottom: 2px solid #6249c8;
+	width: 90%;
 }
+
+
+
+
 
 #remember{
-	margin-left:  10%;
+	margin-left:  5%;
 	margin-bottom: 2%;
 }
 
 .bottonSubmit{
-	margin-left:  10%;
-	margin-bottom: 2%;
-	color: green;
+  background-color: #131313; /* Green */
+  border: 2px solid #4CAF50;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 12px;
+  transition-duration: 0.4s;
 }
-
+.bottonSubmit:hover {
+	background-color: #4CAF50; /* Green */
+	color: white;
+	
+  }
 
 .bottonGoogle{
-	margin-left: 10%;
-	margin-bottom: 2%;
-	color: red;
-	
+	background: #fff;
+    border: 1px solid #1b1b1b;
+    color: #1b1b1b;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+    height: 50px;
+    line-height: 15px;
+    margin-bottom: 16px;
+    padding: 12px 44px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
 }
 
 .bottonFacebook{
