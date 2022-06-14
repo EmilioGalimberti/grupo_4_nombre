@@ -1,4 +1,4 @@
-
+/*mobile*/
 body{
 	background: #131313;
     display: flex;
@@ -17,7 +17,7 @@ h2.title{
 	font-size: 30px;
 }
 
-
+/*seccion con borders*/
 section.cotentForm{
 	text-align: center;
 	width: 90%;
@@ -36,6 +36,7 @@ section.cotentForm{
 	
 }
 
+/*clase inputs*/
 input.inputForms{
 	color: white;
 	width: 60%;
@@ -49,26 +50,38 @@ input.inputForms{
 }
 
 
-
+/*Animacion input*/
 input.inputForms:focus-visible{
-	
 	outline: none;
 	border-bottom: 2px solid #6249c8;
 	width: 90%;
 }
 
+/*para type='email'*/
 input:valid {
 	color: #4CAF50;
   }
-
-  input:invalid {
-	color: red;
+input:invalid {
+	color: rgb(175, 23, 23);
   }
 
+/*Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #4CAF50;
+  -webkit-box-shadow: 0 0 0px 1000px #131313 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
 
 
-
-
+/*contiene boton y checkbox*/
 .form-flex{
 	display: flex;
 	color: white;
@@ -79,11 +92,11 @@ input:valid {
 	justify-content: space-between;
 }
 
+/*checkbox*/
 input:checked + label {
 	color: #4CAF50;
 	
   }
-
 
 div#recordarPass{
 	display: flex;
@@ -105,7 +118,6 @@ div#recordarPass{
   border-radius: 12px;
   transition-duration: 0.4s;
   width: 50%;
- 
 }
 .bottonSubmit:hover {
 	background-color: #4CAF50; /* Green */
@@ -113,3 +125,47 @@ div#recordarPass{
 	width: 50%;
   }
 
+/*Deskopt*/
+@media (min-width: 1024px){
+
+	input.inputForms{
+		padding: 4%;
+		margin-bottom: 4%;
+		margin-top: 1%;
+	}
+
+	.bottonSubmit{
+		padding: 20px;
+		font-size: 20px;
+		justify-content: center;
+		margin-top: 5%;
+		margin-right: 10%;
+		height:0%;
+		border-radius: 144px;
+	}
+
+	.form-flex{
+		display: block;
+		color: white;
+		width: 100%;
+		flex-wrap: wrap;
+		margin-top: 1%;
+		padding: 2%;
+		margin-bottom: 2%;
+	}
+	
+	div#recordarPass{
+		display: block;
+		margin-left: 10%;	
+		font-size: 20px;
+		margin: 0;
+		align-items: center;
+		margin-left: 10%;
+	}
+	input#remember{
+		min-width: 5%;
+		margin-right: 5%;
+	}
+	
+
+}
