@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  <!-- Fuentes -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" /><!-- Logos -->
     <script src="https://kit.fontawesome.com/9f9a3d7540.js" crossorigin="anonymous"></script>
-
+	<title>CreateProdcut</title>
 </head>
 <body>
 	
@@ -40,7 +40,7 @@
 					</div>
 					<div class="col-12 col-md-6">
 						<label for="image" class="form-label">Imagen:</label>
-						<input type="file" id="image" name="image" placeholder="SUBIR FOTO" class="form-input"><!--Carga de un solo archivo-->
+						<input type="file" accept='image/*' id="image" name="image" placeholder="SUBIR FOTO" class="form-input"><!--Carga de un solo archivo-->
 					</div>
 					<div class="col-12 col-md-6">
 						<label for="category" class="form-label">Categoría:</label>
@@ -53,15 +53,15 @@
 					</div>
 					<div class="col-12 col-md-6">
 						<label for="colors" class="form-label">Color/es:</label>
-						<input type="text" id="color" name="color" class="form-input">
+						<input type="text" id="color" name="color" class="form-input" placeholder="Ej: Rojo">
 					</div>
 					<div class="col-12 col-md-6">
 						<label for="size" class="form-label">Talle:</label>
-						<input type="text" id="size" name="size" class="form-input">
+						<input type="text" id="size" name="size" class="form-input" placeholder="Ej: XL">
 					</div>
 					<div class="col-12">
 						<label for="description" class="form-label">Descipción:</label>
-						<textarea name="description" id="description" class="form-input"></textarea>
+						<textarea name="description" id="description" class="form-input" placeholder="Computadora"></textarea>
 					</div>
 					<div class="col-12 col-md-6">
 						<label for="brands" class="form-label">Marca:</label>

@@ -27,22 +27,20 @@ html,
 body {
   min-height: 100vh;
   margin: 0;
-  
-}
-
-body {
-  font-weight: 300;
-  background-color: var(--light-gray);
+  background-color: #131313;
 }
 
 
 
+h1.products-title{
+  color:#6249c8;
+}
 
 
 /*====== Formularios ======*/
 
 .product-detail {
-  background-color: #ffffff;
+  
   border-radius: 8px;
   overflow: hidden;
 }
@@ -55,19 +53,31 @@ div form{
   display: inline-block;
   font-size: 1.6em;
   margin: 10px 0;
+  color:#6249c8
 }
 
 .form-input {
   display: block;
-  width: 100%;
+  width: 50%;
   height: 45px;
   margin-bottom: 15px;
   font-size: 1.5em;
   border-radius: 8px;
-  border: none;
-  border: solid 1px var(--gray);
   padding: 0 15px;
+  color: white;
+  border: none;
+  border-bottom: 2px solid #6249c8;
+  background: none;
+  transition: ease-in-out, width .35s ease-in-out;
 }
+
+
+input.form-input:focus-visible{
+	outline: none;
+	border-bottom: 2px solid #6249c8;
+	width: 100%;
+}
+
 
 textarea.form-input {
   min-height: 140px;
