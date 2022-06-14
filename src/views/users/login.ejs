@@ -22,30 +22,24 @@
         <form action="/" method="POST" class="FormLogin">
             
      	    <div class="email">
-     			<input class='inputForms' type="text" name="email" id="email" placeholder="Escribe tu email">
+     			<input class='inputForms' type="email" name="email" id="email" placeholder="Escribe tu email">
                  
      	    </div>
      	    <div class="password">
 				<input class='inputForms' type="password" name="pass" id="pass"  placeholder="Escribe tu Contraseña">
      	    </div>
-     	    <input type="checkbox" name="remember" id="remember" value="Recordar">
-              <label for="remember">recordar contraseseña</label>  
-              <br>        
-              <input type="submit" class="bottonSubmit" value="Continuar">
-              <br>
-              <button class="bottonGoogle"  role="link" 
-                      onclick="window.location.href='#'" >
-               <i class="fa-brands fa-google"></i>
-               Iniciar sesion con Google
-              </button>
-              <br>
-              <button class="bottonFacebook">
-               <i class="fa-brands fa-facebook"></i>
-               Iniciar sesion con Facebook
-              </button>
+            
+             <div class="form-flex">
+                <div id="recordarPass">
+                <input type="checkbox" name="remember" id="remember" value="Recordar">
+                 <label for="remember" id="recordarPass">recordar contraseseña</label>       
+                </div>
+                 <input type="submit" class="bottonSubmit" value="Continuar">
+            </div>
 		</form>	
+     
 	</section>
-
+        
     <div class="bar errors">
         <ul></ul>
     </div>
