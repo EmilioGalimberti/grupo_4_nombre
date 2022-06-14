@@ -89,7 +89,6 @@ textarea.form-input {
 }
 
 
-
 /*====== small ======*/
 .small {
   font-size: 1.8em;
@@ -149,4 +148,9 @@ textarea.form-input {
     width: 95%;
     margin: auto;
   }
+}
+
+div.errores{
+  color: red;
+  list-style:circle;
 }

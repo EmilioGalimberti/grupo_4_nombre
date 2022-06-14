@@ -25,7 +25,7 @@ const usersControllers = {
 		},
 		userCreate: (req, res) => {
 			if(req.file.filename){
-				const hash = bcrypt.hashSync(req.body.password, 8);
+				const hash = bcrypt.hashSync(req.body.password, 8);  //bcrypt.compareSync
 				/*let newUser = {
 					id: users[users.length - 1].id + 1,
 					firstName: req.body.firstName,

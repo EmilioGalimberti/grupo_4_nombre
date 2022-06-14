@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/productsForms.css" rel="stylesheet">
+    <!-- <link href="css/productsForms.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="css/styleRegister.css">
 	<link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><!-- Fuentes -->
@@ -17,40 +18,42 @@
 <body>
 	
 	<%- include('../partials/header') %>
-	
-	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h1 class="products-title">Formulario de registro de usuarios</h1>
-			</div>
-		</div>
+	<div class="row">
 		<div class="col-12">
-			<form action="/register" method="post" enctype="multipart/form-data"> <!--Permite enviar un form con archivo adjunto por el enctype-->
+			<h1 class="products-title">Registro de usuarios</h1>
+		</div>
+	</div>
+	<div class="container products-wrapper" id="cotentForm">
+		
+		<div class="col-12">
+			<div class="errores">
+				<ul></ul>
+			</div>
+			<form class="register" action="/register" method="post" enctype="multipart/form-data"> <!--Permite enviar un form con archivo adjunto por el enctype-->
 				<div class="row product-detail">
 					<div class="col-12 col-md-6">
-						<label for="name" class="form-label">Ingrese nombre y apellido</label>
-						<input type="text" id="name" name="name" placeholder="Ej: Alexandra Salgán" class="form-input">
+						<label for="name" class="form-label">Nombre y Apellido</label>
+						<input type="text" id="name" name="name" placeholder="Nombre y Apellido" class="form-input">
 					</div>
 					<div class="col-12 col-md-6">
-						<label for="lastName" class="form-label">Ingrese nombre de usuario</label>
+						<label for="lastName" class="form-label">Nombre de usuario</label>
 						<input type="text" id="lastName" name="lastName" placeholder="Ej: Alexandra Salgán" class="form-input">
 					</div>
 					<div class="col-12 col-md-6">
-						<label for="email" class="form-label">Ingrese email</label>
+						<label for="email" class="form-label">Email</label>
 						<input type="text" id="email" name="email" placeholder="Ej: AlexandraSalgán@gmail.com" class="form-input">
 					</div>
                     
                     <div class="col-12 col-md-6">
-						<label for="password" class="form-label">contraseña</label>
+						<label for="password" class="form-label">Contraseña</label>
 						<input  type="password" id="password" name="password" class="form-input" placeholder="Ingrese contraseña" />
 					</div>
                     <div class="col-12 col-md-6">
-						<label for="password" class="form-label"> confirme contraseña</label>
+						<label for="password" class="form-label">Confirme contraseña</label>
 						<input  type="password" id="password" name="password" class="form-input" placeholder="Ingrese contraseña" />
 					</div>
-
 					<div class="col-12 col-md-6">
-						<label for="image" class="form-label">elegi y subi tu foto de perfil de usuario</label>
+						<label for="image" class="form-label">Foto de perfil de usuario</label>
 						<input type="file" id="image" name="image" placeholder="SUBIR FOTO" class="form-input"><!--Carga de un solo archivo-->
 					</div>
 					<div class="col-12">
