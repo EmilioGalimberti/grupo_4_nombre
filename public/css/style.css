@@ -172,6 +172,18 @@ input::placeholder {
     color: #141414;   
 }
 
+div.bar {
+    padding: 10px;
+    margin: 10px;
+    color: #333;
+    background: #141414;
+    border: 1px solid #ccc;
+  }
+
+div.errors{
+    color: red
+
+}
 
 @media (min-width: 1024px) {
 

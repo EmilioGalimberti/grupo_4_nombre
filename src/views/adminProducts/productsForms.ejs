@@ -24,7 +24,7 @@
 			</div>
 		</div>
 		<div class="col-12">
-			<form action="/products" method="post" enctype="multipart/form-data"> <!--Permite enviar un form con archivo adjunto por el enctype-->
+			<form action="/products" method="post" enctype="multipart/form-data" class="formCreate"> <!--Permite enviar un form con archivo adjunto por el enctype-->
 				<div class="row product-detail">
 					<div class="col-12 col-md-6">
 						<label for="name" class="form-label">Nombre del producto:</label>
@@ -73,10 +73,15 @@
 				</div>
 			</form>
 		</div>
-
+		<div  class="bar errors">
+			<ul></ul>
+		</div>
+	
 	</div>
 	<!-- /todos los productos -->
-
+	<script src="/jsValidations/validationCreate.js">
+        
+    </script>
 	<%- include('../partials/footer') %>
 </body>	
 </html>
