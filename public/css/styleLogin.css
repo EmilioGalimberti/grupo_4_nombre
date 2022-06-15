@@ -108,7 +108,7 @@ div#recordarPass{
 
 .bottonSubmit{
   background-color: #131313; /* Green */
-  border: 2px solid #4CAF50;
+  border: 2px solid #2700b3;
   color: white;
   padding: 12px 18px;
   text-align: center;
@@ -120,7 +120,7 @@ div#recordarPass{
   width: 50%;
 }
 .bottonSubmit:hover {
-	background-color: #4CAF50; /* Green */
+	background-color: #2700b3; /* Green */
 	color: white;
 	width: 50%;
   }

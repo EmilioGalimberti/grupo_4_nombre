@@ -33,14 +33,15 @@ body {
 
 
 h1.products-title{
-  color:#6249c8;
+  color:#666666;
 }
 
 
 /*====== Formularios ======*/
 
 .product-detail {
-  
+  padding: 5%;
+  border: 2px solid #6249c8;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -53,7 +54,7 @@ div form{
   display: inline-block;
   font-size: 1.6em;
   margin: 10px 0;
-  color:#6249c8
+  color:#6345DE
 }
 
 .form-input {
@@ -86,7 +87,8 @@ textarea.form-input {
 }
 
 .buy-now-button {
-  background-color: var(--light-blue);
+  /**/
+  background-color: #2700b3;
   font-size: 1.6em;
   color: #ffffff;
   display: flex;
