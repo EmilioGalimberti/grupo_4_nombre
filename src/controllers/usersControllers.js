@@ -7,66 +7,63 @@ const session = require('express-session');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 
-const usersFilePath = path.join(__dirname, '../data/userDataBase.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 let titulos = ['CARRITO', "HOME", "PRODUCTS","SING UP", "login"]
 
 const usersControllers = {
-		acceso: (req, res)=>{
-				session.email = req.body.email;
-				let email = session.email;
-				res.render(path.resolve(__dirname, '../views/web/index'),{titulos, "numero":1, email});
+
+		logueo: (req, res, next)=>{
+			//const user = users.find(element => element.email == req.body.email 
+			//	&& element.password == req.body.pass);
+			db.User.findOne({ where: { email: req.body.email} }).then((usuario) =>{
+				let usuarioLogueo = usuario; 
+				if(usuarioLogueo){
+					let pass = bcrypt.compareSync(req.body.pass,usuarioLogueo.password);
+					if(!pass){
+						const err = "no tiene acceso";
+						console.log("llego a pass: " + err);
+						return res.render('./users/login', {err});
+					}
+					session.email = usuarioLogueo.email;
+					let email = session.email;
+					res.render(path.resolve(__dirname, '../views/web/index'),{titulos, "numero":1, email});
+					}
+				else{
+					    const err = "no tiene acceso";
+						return res.render('./users/login', {err});
+					}		
+			});
+			
 		},
 		register:(req, res) =>{
 			res.render('users/register',{users,toThousand,titulos, "numero":4});
 		},
 		userCreate: (req, res) => {
-			if(req.file.filename){
 
-				const hash = bcrypt.hashSync(req.body.password, 8);
-				/*let newUser = {
-					id: users[users.length - 1].id + 1,
-					firstName: req.body.firstName,
-                 	lastName:req.body.lastName,
-                 	email:req.body.email,
-                 	password: hash,
-					image: "/images/usersData/"+req.file.filename
-				};
-				users.push(newUser);
-				fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));*/
-				res.send(req.body.first_Name);
+			const hash = bcrypt.hashSync(req.body.password, 8);
+			if(req.file){
+	
 				db.User.create({ 
-					first_Name: "gaston",
-                 	last_Name:req.body.email,
+					first_name: req.body.first_Name,
+                 	last_name:req.body.lastName,
                  	email:req.body.email,
                  	password: hash,
 					category: 1,  // usuario comun: 1
 					image: "/images/usersData/"+req.file.filename
 				});
-				console.log(user.username);
 				res.redirect('/');
 			}
-			/*else{
-				let newUser = {
-					id: users[users.length - 1].id + 1,
-					...req.body,
-					image: "/images/usersData/default-image.png"
-				};
-				users.push(newUser);
-				fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+			else{
 				db.User.create({ 
-					first_Name: req.body.first_Name,
-                 	last_Name:req.body.last_Name,
+					first_name: req.body.first_Name,
+                 	last_name: req.body.last_Name,
                  	email:req.body.email,
                  	password: hash,
-					category: 1,  // usuario comun: 1
-					image: "/images/usersData/default-image.png"
+					category: 1,   // usuario comun: 1
+					image: "/images/usersData/avatar.png"
 				});
-				res.redirect('/users');   
-			}  */
+				res.redirect('/');   
+			}  
 		},
 		//form edit users
 		editUser:(req,res)=>{
