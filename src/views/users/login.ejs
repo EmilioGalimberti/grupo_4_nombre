@@ -19,6 +19,10 @@
     <%- include('../partials/header') %>
     <h2 class="title">My account</h2>
 	<section class="cotentForm">
+        <% if (typeof err != 'undefined') { %>
+         <p class="feedback" style="color: red"><%= err %></p>
+         <% } %>
+
         <form action="/" method="POST" class="FormLogin">
             
      	    <div class="email">

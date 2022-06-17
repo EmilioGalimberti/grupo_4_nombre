@@ -18,12 +18,13 @@
 <body>
 	
 	<%- include('../partials/header') %>
+
 	<div class="row">
 		<div class="col-12">
-			<h1 class="products-title">Registro de usuarios</h1>
+			<h2 class="title">Registro de usuarios</h1>
 		</div>
 	</div>
-	<div class="container products-wrapper" id="cotentForm">
+	<section class="cotentForm">
 		
 		<div class="col-12">
 			<div class="errores">
@@ -31,49 +32,30 @@
 			</div>
 			<form class="register" action="/register" method="post" enctype="multipart/form-data"> <!--Permite enviar un form con archivo adjunto por el enctype-->
 				<div class="row product-detail">
-					<div class="col-12 col-md-6">
-						<label for="name" class="form-label">Nombre y Apellido</label>
-						<input type="text" id="name" name="name" placeholder="Nombre y Apellido" class="form-input">
+					<div class="contiene2">
+						<input type="text" id="name" class="rellenar inputForms" name="name" placeholder="Nombre y Apellido" class="form-input">
+						<input type="text" id="lastName" class='inputForms' name="lastName" placeholder="Nombre de usuario" class="form-input">
 					</div>
-					<div class="col-12 col-md-6">
-						<label for="lastName" class="form-label">Nombre de usuario</label>
-						<input type="text" id="lastName" name="lastName" placeholder="Ej: Alexandra Salgán" class="form-input">
+					<div class="contiene2">
+						<input type="email" id="email" class="rellenar inputForms" name="email" placeholder="Email" class="form-input">
+						<input  type="password" id="password" class='inputForms' name="password" class="form-input" placeholder="Contraseña" />
 					</div>
-					<div class="col-12 col-md-6">
-						<label for="email" class="form-label">Email</label>
-						<input type="text" id="email" name="email" placeholder="Ej: AlexandraSalgán@gmail.com" class="form-input">
+                    <div class="contiene2">
+						<input  type="password_confirm" id="password_confirm" class="rellenar inputForms" name="password_confirm" class="form-input" placeholder="Confirme contraseña" />
+						<div class="file-select" id="src-file1" >
+							<input type="file" accept='image/x-png,image/jpeg' id="image" class='inputForms probando' name="image" placeholder="Foto de perfil" class="form-input"><!--Carga de un solo archivo-->
+						</div>
 					</div>
-                    
-                    <div class="col-12 col-md-6">
-						<label for="password" class="form-label">Contraseña</label>
-						<input  type="password" id="password" name="password" class="form-input" placeholder="Ingrese contraseña" />
-					</div>
-                    <div class="col-12 col-md-6">
-<<<<<<< HEAD
-						<label for="password" class="form-label">Confirme contraseña</label>
-						<input  type="password" id="password" name="password" class="form-input" placeholder="Ingrese contraseña" />
-=======
-						<label for="password_confirm" class="form-label"> confirme contraseña</label>
-						<input  type="password_confirm" id="password_confirm" name="password_confirm" class="form-input" placeholder="Ingrese contraseña" />
->>>>>>> 611b9e8b9f0d716b36ae5d434ad1acd1e1169e5e
-					</div>
-					<div class="col-12 col-md-6">
-<<<<<<< HEAD
-						<label for="image" class="form-label">Foto de perfil de usuario</label>
-						<input type="file" id="image" name="image" placeholder="SUBIR FOTO" class="form-input"><!--Carga de un solo archivo-->
-=======
-						<label for="image" class="form-label">elegi y subi tu foto de perfil de usuario</label>
-						<input type="file" accept='image/*' id="image" name="image" placeholder="SUBIR FOTO" class="form-input"><!--Carga de un solo archivo-->
->>>>>>> 611b9e8b9f0d716b36ae5d434ad1acd1e1169e5e
-					</div>
+
+					
 					<div class="col-12">
-						<button type="submit" class="buy-now-button">registrar usuario</button>
+						<button type="submit" class="bottonSubmit">registrar usuario</button>
 					</div>
 				</div>
 			</form>
 		</div>
 
-	</div>
+	</section>
 	<!-- /todos los productos -->
 
 	<%- include('../partials/footer') %>

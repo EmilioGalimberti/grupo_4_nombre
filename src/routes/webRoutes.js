@@ -23,12 +23,13 @@ const storage = multer.diskStorage({
     }
 });
 const uploadFile = multer({storage});
-router.get('/register',usersControllers.register);
+router.get('/register', /*userMidd.acces,*/usersControllers.register);
 router.post('/register', uploadFile.single("image"),usersControllers.userCreate);
 
 
-router.post('/', userMidd.logueo, usersControllers.acceso)
-router.get('/login', userMidd.acces,webControllers.login);
+
+router.get('/login', userMidd.acces, webControllers.login);
+router.post('/', usersControllers.logueo);
 
  
 router.get('/edit/:id', userMidd.acces, usersControllers.editUser); 

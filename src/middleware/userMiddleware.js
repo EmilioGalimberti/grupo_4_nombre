@@ -10,22 +10,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
 let titulos = ['CARRITO', "HOME", "PRODUCTS","SING UP", "login"];
-const usersMiddleware = {
-		
-	logueo:(req, res, next)=>{
-		const user = users.find(element => element.email == req.body.email && element.password == req.body.pass);
-
-		//let errors = validationResult(req);
-		if(!user){
-			const err = "no tiene acceso";
-			//res.status('../views/users/login').json({ err });
-			//res.status(404).json({ err });
-			return res.render('./users/login', {err});
-			//next(res.redirect('back'));
-		}
-		next();
-	},
-
+const usersMiddleware = {		
 	acces: (req, res, next)=>{
 		if(!session.email){
 			next();

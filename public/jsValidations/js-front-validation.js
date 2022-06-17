@@ -30,8 +30,6 @@ window.addEventListener("load", function(){
             errores.push("La contraseña debe contener por lo menos 8 caracteres");
         }
 
-        
-
         if (errores.length > 0 ){
             e.preventDefault();
 
@@ -41,3 +39,10 @@ window.addEventListener("load", function(){
         }
     });
 })
+
+function actualizarInputFile() {
+    var filename = "'" + this.value.replace(/^.*[\\\/]/, '') + "'";
+    this.parentElement.style.setProperty('--fn', filename);
+    }
+    
+    document.querySelectorAll(".file-select input").forEach((ele)=>ele.addEventListener('change', actualizarInputFile));

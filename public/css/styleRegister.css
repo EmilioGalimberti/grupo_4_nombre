@@ -1,70 +1,163 @@
-.divHeaderCenter{
-	display: flex;
-    justify-content: center;
-}
 
 body{
-    margin: 0%;
-    background-color: #131313;
+	background: #131313;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+	margin: 0;
+	width: 100%;
 }
-.cotentForm{
+
+h2.title{
+	color: #6249c8;
+	line-height: 30px;
+    margin: 0 0 3px;
+    padding: 10px 0;
+    text-align: center;
+	font-size: 30px;
+}
+
+
+section.cotentForm{
+	text-align: center;
+	width: 90%;
 	display: flex;
-    justify-content: center;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+	justify-content: center;
+	border: 2px solid #6249c8;
+	border-radius: 20px;
 }
 
-.FormLogin{
-	border: 2px solid #c1e9f5; 
-	border-radius: 15px;
-	width: 50%;
-	color: white;
-}
-.formGroupLabels{
-	margin-top: 2%;
-	margin-bottom: 1%;
-}
-.formLabelEmail{
-	margin-right: 10%;
-	margin-left: 10%;
+.register{
+	width: 100%;
+	color: #a1a1a1;
 }
 
-.formLabelPass{
-	margin-left: 11%;
-}
-
-.formGroupInputs{
-	margin-bottom: 2%;
-}
-.formInputEmail{
-	margin-right: 10%;
-	margin-left: 10%;
+input.inputForms{
+	width: 60%;
+	padding: 20px 20px;
+	box-sizing: border-box;
+	border: none;
+    border-bottom: 2px solid #6249c8;
+	background: none;
+	transition: ease-in-out, width .35s ease-in-out;
 }
 
 
-.formInputPass{
-	margin-left: 2%;
+
+input.inputForms:focus-visible{
+	outline: none;
+	border-bottom: 2px solid #6249c8;
+	width: 90%;
 }
 
-#remember{
-	margin-left:  10%;
-	margin-bottom: 2%;
+input:valid {
+	color: #4CAF50;
 }
 
-.bottonSubmit{
-	margin-left:  10%;
-	margin-bottom: 2%;
-	color: green;
-}
-
-
-.bottonGoogle{
-	margin-left: 10%;
-	margin-bottom: 2%;
+input:invalid {
 	color: red;
+}
+
+
+
+.form-flex{
+	display: flex;
+	color: white;
+	width: 100%;
+	flex-wrap: wrap;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	justify-content: space-between;
+}
+
+input:checked + label {
+	color: #4CAF50;
 	
 }
 
-.bottonFacebook{
-	margin-left:  10%;
-	margin-bottom: 3%;
-	color: blue;
+
+div#recordarPass{
+	display: flex;
+	width: 40%;
+	margin-right: 5%;
+	align-items: center;
+    flex-direction: row;
+}
+
+.bottonSubmit{
+	background-color: #131313; /* Green */
+	border: 2px solid #4CAF50;
+	color: white;
+	padding: 12px 18px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	border-radius: 12px;
+	transition-duration: 0.4s;
+	width: 50%;
+	margin-bottom: 8px;
+}
+
+.bottonSubmit:hover {
+	background-color: #4CAF50; /* Green */
+	color: white;
+	width: 50%;
+}
+
+/* BOTON FILE*/
+.file-select {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .file-select::before {
+	background-color: #620096;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 3px;
+	content: 'Seleccionar'; /* testo por defecto */
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+  }
+  
+  .file-select input[type="file"] {
+	opacity: 0;
+	width: 200px;
+	height: 32px;
+	display: inline-block;
+  }
+  
+  :root {
+	--fn: 'Seleccionar Archivo';
+	overflow: hidden;
+	}
+	
+.file-select::before {
+	white-space: nowrap;
+	content: var(--fn);
+	overflow: hidden;
+}
+
+li{
+	color: red
+}
+
+@media (min-width: 1024px){
+
+	.contiene2{
+	display: flex;
+	margin-bottom: 4%;
+}
+	.rellenar{
+		margin-right: 7%;
+	}
 }
