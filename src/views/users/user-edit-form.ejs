@@ -22,43 +22,46 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">Estás editando: <i><%= userToEdit.name %></i></h2>
+				<h2 class="products-title">Estás editando: <i><%= userToEdit.first_name %></i></h2>
 			</div>
 		</div>
 		<div class="col-12">
-			<form action="/users/update" method="post" enctype="multipart/form-data"> <!--Permite enviar un form con archivo adjunto por el enctype-->
+			<form action="/update" method="post" enctype="multipart/form-data"> <!--Permite enviar un form con archivo adjunto por el enctype-->
 				<input id="userId" name="userId" type="hidden" value="<%= userToEdit.id%>">
 				<div class="row product-detail">
 					<div class="col-12 col-md-6">
 						<label for="name" class="form-label">Nombre</label>
-						<input type="text" id="name" name="name" placeholder="Ej: Alexandra Salgán" class="form-input" value="<%= userToEdit.name%>">
+						<input type="text" id="first_name" name="first_name" placeholder="Ej: Alexandra Salgán" class="form-input" value="<%= userToEdit.first_name%>">
 					</div>
 					<div class="col-12 col-md-6">
 						<label for="lastName" class="form-label"> nombre de usuario</label>
-						<input type="text" id="lastName" name="lastName" placeholder="Ej: Alexandra Salgán" class="form-input" value="<%= userToEdit.lastName%>">
+						<input type="text" id="last_name" name="last_name" placeholder="Ej: Alexandra Salgán" class="form-input" value="<%= userToEdit.last_name%>">
 					</div>
 					<div class="col-12 col-md-6">
-						<label for="email" class="form-label">email</label>
-						<input type="number" id="discount" name="discount" placeholder="Ej: 15" class="form-input" value="<%= userToEdit.email%>">
+						<label for="lastName" class="form-label"> nombre de usuario</label>
+						<input type="text" id="email" name="email" placeholder="Ej: Alexandra Salgán" class="form-input" value="<%= userToEdit.email%>">
 					</div>
                     <div class="col-12 col-md-6">
 						<label for="password" class="form-label">contraseña</label>
-						<input  type="password" id="password" name="password" class="form-input" placeholder="Ingrese contraseña" value="<%= userToEdit.password%>">
+						<input  type="password" id="password" name="password" class="form-input" placeholder="Ingrese contraseña" >
 					</div>
                     <div class="col-12 col-md-6">
 						<label for="password" class="form-label">confirme contraseña</label>
-						<input  type="password" id="password" name="password" class="form-input" placeholder="Ingrese contraseña" value="<%= userToEdit.password%>">
+						<input  type="password" id="confirmPassword" name="confirmPassword" class="form-input" placeholder="Ingrese contraseña" >
 					</div>
                     <div class="col-12 col-md-6">
 						<label for="image" class="form-label">elegi y subi tu foto de perfil de usuario</label>
 						<input type="file" id="image" name="image" placeholder="SUBIR FOTO" class="form-input"><!--Carga de un solo archivo-->
-						<img src="<%= userToEdit.imagen%>">
+						<img src="<%= userToEdit.image%>">
 					</div>
-
 					<div class="col-12">
 						<button type="submit" class="buy-now-button">Editar Usuario</button>
 					</div>
+					<form action="/delete<%= userToEdit.id%>?_method=DELETE" method="post">
+						<button type="submit" class="action-button">ELIMINAR</button>
+					</form>
 				</div>
+				
 			</form>
 		</div>
 

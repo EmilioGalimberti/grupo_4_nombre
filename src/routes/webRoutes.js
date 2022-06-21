@@ -35,5 +35,6 @@ router.post('/', usersControllers.logueo);
 router.get('/edit/:id', userMidd.acces, usersControllers.editUser); 
 router.post('/update', uploadFile.single("image"),usersControllers.update);
 
+router.delete("/delete/:id",userMidd.acces,usersControllers.destroy)
 
 module.exports = router;

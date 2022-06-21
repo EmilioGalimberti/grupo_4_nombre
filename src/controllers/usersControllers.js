@@ -42,7 +42,7 @@ const usersControllers = {
 
 			const hash = bcrypt.hashSync(req.body.password, 8);
 			if(req.file){
-	
+					console.log('req.body',req.body)
 				db.User.create({ 
 					first_name: req.body.first_Name,
                  	last_name:req.body.lastName,
@@ -65,6 +65,7 @@ const usersControllers = {
 				res.redirect('/');   
 			}  
 		},
+
 		//form edit users
 		editUser:(req,res)=>{
 			let id=req.params.id
@@ -74,33 +75,114 @@ const usersControllers = {
                 res.render('users/user-edit-form', {userToEdit})
             })
 		},
-		// Update - Method to update
-	update: (req, res) => {
-        
-		let id = req.body.userId;
-		let userToEdit = users.find(user => user.id == id)
-        
-        
-		userToEdit = {
-			id: userToEdit.id,
-			...req.body,
-			image: userToEdit.image,
-		};
+		update: function (req, res) {
+			console.log('req',req.body);
+			db.User.update({
+				first_name: req.body.first_name,
+				last_name: req.body.last_name,
+				email: req.body.email,
+				password: req.body.password,
+				category: req.body.category,
+				image: req.file ? "/images/usersData/"+req.file.filename : "/images/usersData/avatar.png"
+			}, {
+				where: {
+					id: req.body.userId
+				}
+			});
+			console.log(db.User.findByPk(req.body.userId));
+			res.redirect(`/`)
+		},
 
-		let newUsers = users.map(user => {
-			if (user.id == userToEdit.id) {
-				return user = {...userToEdit};
-			}
-			return user;
-		})
+		destroy: (req, res) => {
+			console.log(req);
+			db.User
+				.findByPk(id)
+				// Si el registro existe
+				.then(async user => {
+					// Lo borramos
+					await db.User.destroy({ where: { id:req.body.userId} });
+					
+					// y además borramos la imagen asociada
+					const imagePath = path.resolve(__dirname, '../../public/images/usersData', user.image);
+					if (fs.existsSync(imagePath)) {
+						fs.unlinkSync(imagePath);
+					}
+	
+					// luego volvemos al listado
+					res.redirect(`/`)
+				})
+				.catch(error => console.log(error));
+		}
 
-		fs.writeFileSync(usersFilePath, JSON.stringify(newUsers, null, ' '));
-	},
-	destroy : (req, res) => {
-		let id = req.params.id;
-        db.Product.destroy({where:{id: id}})
-		res.redirect('/');
-	}
+	/*destroy: (req, res) => {
+        db.User
+            .findByPk(req.params.id)
+            // Si el registro existe
+            .then(async user => {
+                // Lo borramos
+                await db.User.destroy({ where: { id: req.params.id } });
+                
+                // y además borramos la imagen asociada
+                const imagePath = path.resolve(__dirname, '../../public/images/usersData', user.image);
+                if (fs.existsSync(imagePath)) {
+                    fs.unlinkSync(imagePath);
+                }
+
+                // luego volvemos al listado
+                res.redirect(`/`)
+            })
+            .catch(error => console.log(error));
+    }
+
+*/
 }
 
 module.exports = usersControllers;
+
+/* update: (req, res) => {
+
+        product = req.body;
+        
+        product.image = req.params.image ? req.body.image : req.body.oldImage;
+        delete product.oldImage;
+
+        // product.keywords = product.keywords.split(' ');
+        
+        db.product
+            .update(product, {
+                where: {
+                    id: req.params.id
+
+                }
+            })
+            .then(updatedProduct => {
+                // Guardar tags
+                // updatedProduct.addTags()
+                res.redirect(`/products/${req.params.id}`)
+            })
+            .catch(error => { console.log(error) })
+        
+    },
+*/
+
+/*destroy: (req, res) => {
+        db.product
+            .findByPk(req.params.id)
+            // Si el registro existe
+            .then(async product => {
+                // Lo borramos
+                await db.product.destroy({ where: { id: req.params.id } });
+                
+                // y además borramos la imagen asociada
+                const imagePath = path.resolve(__dirname, '../../public/images/products', product.image);
+                if (fs.existsSync(imagePath)) {
+                    fs.unlinkSync(imagePath);
+                }
+
+                // luego volvemos al listado
+                res.redirect(`/products/`)
+            })
+            .catch(error => console.log(error));
+    }
+
+*/
