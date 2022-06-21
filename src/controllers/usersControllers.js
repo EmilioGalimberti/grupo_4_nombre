@@ -45,7 +45,7 @@ const usersControllers = {
 	
 				db.User.create({ 
 					first_name: req.body.first_Name,
-                 	last_name:req.body.lastName,
+                 	last_name: req.body.last_Name,
                  	email:req.body.email,
                  	password: hash,
 					category: 1,  // usuario comun: 1
