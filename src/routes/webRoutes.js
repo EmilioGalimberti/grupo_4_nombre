@@ -6,7 +6,7 @@ const webControllers = require('../controllers/webControllers.js');
 const usersControllers = require('../controllers/usersControllers.js');
 const userMidd = require("../middleware/userMiddleware.js");
 const session = require('express-session');
-
+const {validationResult, body} = require('express-validator');
 
 router.get('/', webControllers.index);
 router.get('/carrito', webControllers.carrito);
@@ -24,7 +24,8 @@ const storage = multer.diskStorage({
 });
 const uploadFile = multer({storage});
 router.get('/register', /*userMidd.acces,*/usersControllers.register);
-router.post('/register', uploadFile.single("image"),usersControllers.userCreate);
+router.post('/register', uploadFile.single("image"),
+            userMidd.userValidation(), userMidd.validate, usersControllers.userCreate);
 
 
 

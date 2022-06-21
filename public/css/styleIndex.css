@@ -1,5 +1,27 @@
-/* --- Estilos en las etiquetas --- */
+/* Aquí definimos las Custom properties */
+:root {
+    --negro: #393939;
+    --blanco: #ececec;
+    --sombra-ppal: #c9c9c9;
+    --sombra-sec: #ffffff;
+    --borde-negro: #00000050;
+    --marcado: rgb(127, 195, 255);
+    /* Tipografía */
+    --tipo-principal: Helvetica, Arial, sans-serif;
+}
 
+  /* Las adaptamos al modo oscuro */
+@media (prefers-color-scheme: dark) {
+:root {
+    --negro: #ececec;
+    --blanco: #303030;
+    --sombra-ppal: #242424;
+    --sombra-sec: #3c3c3c;
+    --borde-negro: #FFFFFF50;
+    }
+}
+
+/* --- Estilos en las etiquetas --- */
 main {
     padding-bottom: 0.5%;
     box-sizing: border-box;
@@ -21,7 +43,7 @@ h2 {
 .sector-categorias {
     display: flex;
     justify-content: space-between;
-    margin: 0.5% 0.5% 0.5% 0.5%;
+    margin: 0.5% 0.5% 4% 0.5%;
 }
 
 .categorias {
@@ -51,49 +73,75 @@ h2 {
     position: relative;
     z-index: 0;
 }
-/*
-#slider{
+
+/*CARROUSEL*/
+
+.carrousel {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 120em;
+    padding: 2em;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--blanco);
+    /*box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;*/
     overflow: hidden;
 }
-#slider figure{
-    position: relative;
-    width: 500%;
-    margin: 0;
-    left: 0;
-    animation: 20s slider infinite;
-}
-#slider figure img{
-    width: 20%;
-    float: left;
+
+.carrousel .grande {
+    width: 200%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--blanco);
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+    padding: 2em;
+    transition: all 0.5s ease;
+    transform: translateX(0%);
 }
 
-@keyframes  slider {
-    0% {
-        left: 0%;
-    }
-    20% {
-        left: 0%;
-    }
-    25% {
-        left: -100%;
-    }
-    45% {
-        left: -100%;
-    }
-    50% {
-        left: -200%;
-    }
-    70% {
-        left: -200%;
-    }
-    75% {
-        left: -300%;
-    }
-    90% {
-        left: -300%;
-    }
+.carrousel .img {
+    width: calc( 100% / 2 - 2em);
+    min-height: 10vh;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--blanco);
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
 }
-*/
+
+.carrousel .puntos {
+    width: 100%;
+    margin: 1em 0 0;
+    padding: 0.4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrousel .punto {
+    width: 2em;
+    height: 2em;
+    margin: 1em 1em 0;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--blanco);
+    box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+}
+
+.carrousel .punto.activo {
+    background-color: lightblue;
+}
+
+
+
 @media (min-width: 1024px){
     .categorias{
         width: 30%;

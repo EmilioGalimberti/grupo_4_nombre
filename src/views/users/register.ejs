@@ -18,8 +18,24 @@
 <body>
 	
 	<%- include('../partials/header') %>
+<<<<<<< HEAD
 
 	<div class="row">
+=======
+	
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h1 class="products-title">Formulario de registro de usuarios</h1>
+			</div>
+		</div>
+		<% if (typeof errors != 'undefined') { %>
+			 <% errors.forEach((err) => { %>
+	 		 	<li style="color: red;"><%= err.value %></li> 
+			 <% }) %> 
+		<% }%>
+		 
+>>>>>>> 791b57ab576dfa78b1c1852ea8696bf787dd745c
 		<div class="col-12">
 			<h2 class="title">Registro de usuarios</h1>
 		</div>
