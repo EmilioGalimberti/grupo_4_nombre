@@ -5,6 +5,7 @@ const app = express();
 const webRoutes =  require('./routes/webRoutes.js');
 const productsRoutes =  require('./routes/productsRoutes.js');
 //const usersRoutes =  require('./routes/usersRoutes.js');
+const apiProductsRouter = require('./routes/api/products');
 const PORT = 3050;
 
 
@@ -39,12 +40,12 @@ const userApiRoutes = require('./routes/api/userApiRoute')
 app.use('/api/users', userApiRoutes)
 
 
+//Apis
+app.use("/api/products", apiProductsRouter);
 
 app.use(function(req, res){
     res.status(404).render("errors/err_404.ejs", { title: "No encontrado" });
 });
-
-
 
 
 app.listen(PORT, () => {

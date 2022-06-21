@@ -23,7 +23,7 @@ const storage = multer.diskStorage({
     }
 });
 const uploadFile = multer({storage});
-router.get('/register', userMidd.acces,usersControllers.register);
+router.get('/register', /*userMidd.acces,*/usersControllers.register);
 router.post('/register', uploadFile.single("image"),usersControllers.userCreate);
 
 
