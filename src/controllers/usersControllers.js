@@ -36,7 +36,7 @@ const usersControllers = {
 			
 		},
 		register:(req, res) =>{
-			res.render('users/register',{users,toThousand,titulos, "numero":4});
+			res.render('users/register',{titulos, "numero":4});
 		},
 		userCreate: (req, res) => {
 
