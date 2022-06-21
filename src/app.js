@@ -32,9 +32,18 @@ app.use("/", webRoutes);
 app.use("/products", productsRoutes);
 //app.use("/users", usersRoutes);
 
+
+//apiUser
+const userApiRoutes = require('./routes/api/userApiRoute')
+
+app.use('/api/users', userApiRoutes)
+
+
+
 app.use(function(req, res){
     res.status(404).render("errors/err_404.ejs", { title: "No encontrado" });
 });
+
 
 
 

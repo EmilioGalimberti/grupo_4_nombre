@@ -36,7 +36,7 @@ const usersControllers = {
 			
 		},
 		register:(req, res) =>{
-			res.render('users/register',{users,toThousand,titulos, "numero":4});
+			res.render('users/register',{titulos, "numero":4});
 		},
 		userCreate: (req, res) => {
 
@@ -94,13 +94,15 @@ const usersControllers = {
 			return user;
 		})
 
-		fs.writeFileSync(usersFilePath, JSON.stringify(newUsers, null, ' '));
+		//fs.writeFileSync(usersFilePath, JSON.stringify(newUsers, null, ' '));
 	},
 	destroy : (req, res) => {
 		let id = req.params.id;
         db.Product.destroy({where:{id: id}})
 		res.redirect('/');
-	}
+	},
+
+
 }
 
 module.exports = usersControllers;
