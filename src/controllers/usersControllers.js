@@ -60,7 +60,8 @@ const usersControllers = {
                  	email:req.body.email,
                  	password: hash,
 					category: 1,   // usuario comun: 1
-					image: "/images/usersData/avatar.png"
+					image: "/images/usersData/avatar.png",
+					//urldetail: 'http://localhost:3050/api/users/' + user.id 
 				});
 				res.redirect('/');   
 			}  
