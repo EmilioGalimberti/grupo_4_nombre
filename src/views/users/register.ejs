@@ -20,11 +20,17 @@
 	<%- include('../partials/header') %>
 	
 		<div class="row">
-			
-		<% if (typeof errors != 'undefined') { %>
-			 <% errors.forEach((err) => { %>
-	 		 	<li style="color: red;"><%= err.value %></li> 
+			<div class="col-12">
+				<h1 class="products-title">Formulario de registro de usuarios</h1>
+			</div>
+		</div>
+		<% if (typeof errores != 'undefined') { %>
+			 <% errores.array().map(err =>{ %>
+	 		 	<li style="color: red;"><%= err.msg %></li> 
 			 <% }) %> 
+			 <% if (typeof errores.file != 'undefined') { %>
+			 	<li style="color: red;"><%= errores.file.msg %></li> 
+			 <% }%>
 		<% }%>
 		 
 		<div class="col-12">
