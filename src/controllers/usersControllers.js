@@ -60,7 +60,8 @@ const usersControllers = {
                  	email:req.body.email,
                  	password: hash,
 					category: 1,   // usuario comun: 1
-					image: "/images/usersData/avatar.png"
+					image: "/images/usersData/avatar.png",
+					//urldetail: 'http://localhost:3050/api/users/' + user.id 
 				});
 				res.redirect('/');   
 			}  
@@ -94,13 +95,15 @@ const usersControllers = {
 			return user;
 		})
 
-		fs.writeFileSync(usersFilePath, JSON.stringify(newUsers, null, ' '));
+		//fs.writeFileSync(usersFilePath, JSON.stringify(newUsers, null, ' '));
 	},
 	destroy : (req, res) => {
 		let id = req.params.id;
         db.Product.destroy({where:{id: id}})
 		res.redirect('/');
-	}
+	},
+
+
 }
 
 module.exports = usersControllers;

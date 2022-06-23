@@ -33,6 +33,13 @@ app.use("/", webRoutes);
 app.use("/products", productsRoutes);
 //app.use("/users", usersRoutes);
 
+
+//apiUser
+const userApiRoutes = require('./routes/api/userApiRoute')
+
+app.use('/api/users', userApiRoutes)
+
+
 //Apis
 app.use("/api/products", apiProductsRouter);
 
