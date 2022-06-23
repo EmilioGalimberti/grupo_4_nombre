@@ -39,10 +39,14 @@
 									<img src="<%= product.image %>" alt="imagen de producto" width="250px">
 								</figure>
 								<article class="product-box_data">
-									<h2 class="precio">$<%= toThousand(finalPrice) %></h2>
+									<div>
+									<h2 class="precio">$<%= toThousand(product.price) %></h2>
 									<span><%= product.discount %> %OFF</span>
+									</div>
+									<div>
 									<p class="precio"><%= product.name %></p>
-									</article>
+									</div>
+								</article>
 							</a>
 						</section>
 									<a href="/products/edit/<%= product.id %>" class="action-button">EDITAR PRODUCTO</a> <br> <br>
