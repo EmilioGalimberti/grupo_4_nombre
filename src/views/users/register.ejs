@@ -19,12 +19,8 @@
 	
 	<%- include('../partials/header') %>
 	
-	<div class="container products-wrapper">
 		<div class="row">
-			<div class="col-12">
-				<h1 class="products-title">Formulario de registro de usuarios</h1>
-			</div>
-		</div>
+			
 		<% if (typeof errors != 'undefined') { %>
 			 <% errors.forEach((err) => { %>
 	 		 	<li style="color: red;"><%= err.value %></li> 

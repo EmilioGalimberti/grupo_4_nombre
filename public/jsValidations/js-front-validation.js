@@ -26,7 +26,7 @@ window.addEventListener("load", function(){
 
         if (campoPassword.value == "") {
             errores.push("La contraseña es obligatoria");
-        } else if (campoNombre.value.length < 8){
+        } else if (campoPassword.value.length < 8){
             errores.push("La contraseña debe contener por lo menos 8 caracteres");
         }
 
