@@ -43,12 +43,21 @@ const usersMiddleware = {
 	  const errors = validationResult(req);
 	  
 	  if (typeof req.file != 'undefined'){
-	  	  console.log(req.file.filename);
-	  	  console.log(req.file.filename.indexOf(["png"]));
-		  if(req.file.filename.indexOf("png") == -1 ||
-		  	 req.file.filename.indexOf("jpeg") == -1){
+	  	  let arr = new Array();
+	  	  arr.push(req.file.filename.indexOf(["png"]));
+	  	  arr.push(req.file.filename.indexOf(["jpeg"]));
+	  	  arr.push(req.file.filename.indexOf(["jpg"]));	
+	  	  let contador = 0;
+	  	  for (var i = 0; i < arr.length ; i++) {
+	  	  	if(arr[i] > 0){
+	  	  		contador = 1;
+	  	  	}
+	  	  }
+	  	  
+		  if(contador == 0){
 		  	errors.file = {value: req.file.filename, msg: "debe agregar una imagen valida de extension JPG, JPEG, PNG, GIF"};
 		  }
+		  
 	  }
 	  else{
 	  	errors.file = {msg: "debe agregar una imagen"};
