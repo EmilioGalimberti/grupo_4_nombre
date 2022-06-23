@@ -63,7 +63,7 @@ const usersMiddleware = {
 	  	errors.file = {msg: "debe agregar una imagen"};
 	  }
 	  
-	  if(errors.isEmpty() && typeof errors.file.msg == 'undefined') {
+	  if(errors.isEmpty() && typeof errors.file == 'undefined') {
 	    return next()
 	  }
 	

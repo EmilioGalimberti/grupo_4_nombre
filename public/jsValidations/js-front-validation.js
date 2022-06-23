@@ -6,7 +6,7 @@ window.addEventListener("load", function(){
         let errores = [];
         let ulErrores = document.querySelector("div.errores ul")
 
-        let campoNombre = document.querySelector("input#name")
+        let campoNombre = document.querySelector("input#first_Name")
         
         if (campoNombre.value == "") {
             errores.push("El campo nombre es obligatorio");
