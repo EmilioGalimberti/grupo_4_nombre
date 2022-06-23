@@ -19,9 +19,9 @@ const usersMiddleware = {
 		}
 	},
 	userValidation: () => {
-			//console.log(body('image').notEmpty().isLength({ min: 2 }));
+			
 		  	return [
-		    body('first_Name').isLength({ min: 5 }).withMessage("El nombre es obligatorio"),
+		    body('first_Name').isLength({ min: 5 }).withMessage("El nombre de tener al menos 5 caracteres"),
 		    body('email').isEmail().withMessage("El email es obligatorio"),
 		    body('email').custom(async (mail) => {
 			            	  const existingUser = await db.User.findOne({ where: { email: mail } });
@@ -30,8 +30,10 @@ const usersMiddleware = {
 			            	  }
 			              }),
 		 
-		    body('password').isLength({ min: 8 }).withMessage("La contraseña es obligatoria"),
-		    body('password').matches(/\d/).matches(/[A-Z]/).matches(/[a-z]/).withMessage('debe agregar una contraseña correcta, debe tener al menos una mayuscula, una minuscula y uno o mas numeros')
+		    body('password').isLength({ min: 8 }).withMessage("La contraseña debe tener al menos 8 digitos."),
+		    body('password').matches(/[a-z]/).withMessage('La contraseña debe tener al menos una minuscula.'),
+		    body('password').matches(/\d/).withMessage('La contraseña debe tener al menos un numero.'),
+		    body('password').matches(/[A-Z]/).withMessage('La contraseña debe tener al menos una mayuscula.')
 		  ]
 		 
 	},
@@ -39,24 +41,24 @@ const usersMiddleware = {
 
 	  
 	  const errors = validationResult(req);
-	  if (typeof req.file.filename != 'undefined'){
-		  if(req.file.filename.indexOf(["png"]) == -1 ||
-		  	 req.file.filename.indexOf(["jpeg"]) == -1 ||
-		  	 req.file.filename.indexOf(["jpg"]) == -1 ||
-		  	 req.file.filename.indexOf(["gif"]) == -1){
+	  
+	  if (typeof req.file != 'undefined'){
+	  	  console.log(req.file.filename);
+	  	  console.log(req.file.filename.indexOf(["png"]));
+		  if(req.file.filename.indexOf("png") == -1 ||
+		  	 req.file.filename.indexOf("jpeg") == -1){
 		  	errors.file = {value: req.file.filename, msg: "debe agregar una imagen valida de extension JPG, JPEG, PNG, GIF"};
 		  }
 	  }
 	  else{
 	  	errors.file = {msg: "debe agregar una imagen"};
 	  }
-	  if (errors.isEmpty()) {
+	  
+	  if(errors.isEmpty() && typeof errors.file.msg == 'undefined') {
 	    return next()
 	  }
-	  const extractedErrors = []
-	  errors.array().map(err => extractedErrors.push({ "value": err.msg }))
-	  console.log(extractedErrors)
-	  return res.render('users/register',{titulos, "numero":4, errors: extractedErrors});
+	
+	  return res.render('users/register',{titulos, "numero":4, errores: errors});
 	}
 }
 

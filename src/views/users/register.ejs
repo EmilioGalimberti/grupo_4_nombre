@@ -24,10 +24,13 @@
 				<h1 class="products-title">Formulario de registro de usuarios</h1>
 			</div>
 		</div>
-		<% if (typeof errors != 'undefined') { %>
-			 <% errors.forEach((err) => { %>
-	 		 	<li style="color: red;"><%= err.value %></li> 
+		<% if (typeof errores != 'undefined') { %>
+			 <% errores.array().map(err =>{ %>
+	 		 	<li style="color: red;"><%= err.msg %></li> 
 			 <% }) %> 
+			 <% if (typeof errores.file != 'undefined') { %>
+			 	<li style="color: red;"><%= errores.file.msg %></li> 
+			 <% }%>
 		<% }%>
 		 
 		<div class="col-12">
