@@ -94,19 +94,19 @@ const usersControllers = {
 		},
 
 		destroy: (req, res) => {
-			console.log(req);
+			console.log(req.params.id);
 			db.User
-				.findByPk(id)
+			.findByPk(req.params.id)
 				// Si el registro existe
-				.then(async user => {
+				.then( user => {
 					// Lo borramos
-					await db.User.destroy({ where: { id:req.body.userId} });
+					db.User.destroy({ where:{ id:req.params.id} });
 					
-					// y además borramos la imagen asociada
+					/* // y además borramos la imagen asociada
 					const imagePath = path.resolve(__dirname, '../../public/images/usersData', user.image);
 					if (fs.existsSync(imagePath)) {
 						fs.unlinkSync(imagePath);
-					}
+					} */
 	
 					// luego volvemos al listado
 					res.redirect(`/`)
@@ -139,50 +139,3 @@ const usersControllers = {
 
 module.exports = usersControllers;
 
-/* update: (req, res) => {
-
-        product = req.body;
-        
-        product.image = req.params.image ? req.body.image : req.body.oldImage;
-        delete product.oldImage;
-
-        // product.keywords = product.keywords.split(' ');
-        
-        db.product
-            .update(product, {
-                where: {
-                    id: req.params.id
-
-                }
-            })
-            .then(updatedProduct => {
-                // Guardar tags
-                // updatedProduct.addTags()
-                res.redirect(`/products/${req.params.id}`)
-            })
-            .catch(error => { console.log(error) })
-        
-    },
-*/
-
-/*destroy: (req, res) => {
-        db.product
-            .findByPk(req.params.id)
-            // Si el registro existe
-            .then(async product => {
-                // Lo borramos
-                await db.product.destroy({ where: { id: req.params.id } });
-                
-                // y además borramos la imagen asociada
-                const imagePath = path.resolve(__dirname, '../../public/images/products', product.image);
-                if (fs.existsSync(imagePath)) {
-                    fs.unlinkSync(imagePath);
-                }
-
-                // luego volvemos al listado
-                res.redirect(`/products/`)
-            })
-            .catch(error => console.log(error));
-    }
-
-*/
