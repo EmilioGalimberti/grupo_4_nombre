@@ -6,11 +6,11 @@ module.exports={
         db.User
         .findAll({attributes: ['id','first_name','email']})
         .then(users => {
-            users.detail = 'http://localhost:3050/api/users/:id'
-            return res.status(200).json({
+            
+            res.json({
                 total: users.length,
                 data: users,
-                status: 200
+                
             })
         })
     },
