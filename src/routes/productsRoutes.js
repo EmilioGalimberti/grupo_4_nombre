@@ -17,6 +17,8 @@ const uploadFile = multer({storage});
 // get all productsControllers
 router.get('/', productsControllers.listProducts);
 
+// get one product
+router.get('/detail/:id', productsControllers.getProduct);
 
 // create one product
 router.get('/create', productsMidd.acces, productsControllers.formProduct);

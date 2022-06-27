@@ -34,17 +34,17 @@
 					%>
 					<div class="col-12 col-sm-6 col-lg-3">
 						<section class="product-box">
-							<a href="/products/detail/<%= product.id %>">
-								<figure class="product-box_image">
-									<img src="<%= product.image %>" alt="imagen de producto" width="250px">
-								</figure>
+							<a href="products/detail/<%= product.id %>">
+									<div class="contenedorimagen">
+									<img src="<%= product.image %>" alt="imagen de producto" width="250px" class="imagenes">
+									</div>
 								<article class="product-box_data">
-									<div>
+									<div class="contenedorpreciodescuento">
 									<h2 class="precio">$<%= toThousand(product.price) %></h2>
 									<span><%= product.discount %> %OFF</span>
 									</div>
 									<div>
-									<p class="precio"><%= product.name %></p>
+									<p class="nombre"><%= product.name %></p>
 									</div>
 								</article>
 							</a>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/productDetail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  <!-- Fuentes -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" /><!-- Logos -->
+    <script src="https://kit.fontawesome.com/9f9a3d7540.js" crossorigin="anonymous"></script>
+    <title>Detalle de producto</title>
+</head>
+
+<body>
+	<!-- Header -->
+	<%- include('../partials/header') %>
+
+    <main>
+        <% let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0) %>
+        <div class="contenido">
+            <div class="imagen">
+                <img src="<%= product.image %>" alt="imagen de producto" class="imgcont">
+            </div>
+            <div class="descripcion">
+                <h1 class="nombre"><%= product.name %></h1>
+                <p class="texto"><%= product.description %> <br> Marca:<%= product.brand %> <br> Talle:<%= product.size %> <br> Color: <%= product.color %> </p>
+                <div class="contenedor2">
+                    <h2 class="precio">$<%= toThousand(product.price) %></h2>
+				    <span class="porcentaje"><%= product.discount %> %OFF</span>
+                </div>
+                <h2 class="descuento">$<%= toThousand(finalPrice) %></h2>
+                <a href="/products" class="linkcarrito"><p class="agregar">AGREGAR AL CARRITO</p></a>
+                <a href="/carrito" class="linkcarrito"><p class="comprar">COMPRAR AHORA</p></a>
+            </div>
+        </div>
+	</main>
+
+	<!-- Footer -->
+    <%- include('../partials/footer') %>
+
+</body>
+</html>

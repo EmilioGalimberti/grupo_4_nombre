@@ -22,6 +22,16 @@ const productsControllers = {
             })
     },
 
+    // show one product
+    getProduct:(req, res) =>{
+		let email = session.email;
+        let id = req.params.id
+        db.Product.findByPk(id)
+            .then(product => {
+                res.render('adminProducts/productDetail', {product,toThousand})
+            })
+    },
+
     //Form create
     formProduct:(req, res) =>{
         res.render('adminProducts/productsForms',{titulos, "numero":4});

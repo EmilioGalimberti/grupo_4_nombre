@@ -133,18 +133,28 @@ body{
   border-radius: 5px;
   margin: 20px 0;
   height: auto;
+  width: 260px
+}
+.product-box:hover {
+  box-shadow: 0px 10px 20px rgb(77, 77, 77);
+  border: 1px solid white;
 }
 
-.product-box_image {
-  border-bottom: 1px solid var(--light-gray);
+.imagenes{
+  margin: 5px;
 }
-
+.contenedorimagen{
+  border-bottom: #131313 1px solid;
+}
+.contenedorpreciodescuento{
+  display:flex;
+}
 .product-box_data {
   padding: 15px;
-  display: flex;
+  padding-bottom: 0px;
   align-items: center;
   flex-wrap: wrap;
-  height: 125px
+  height: 100px
 }
 
 .product-box_data h2 {
@@ -178,7 +188,6 @@ body{
   top: -15px;
   right: 15px;
   background-color: #ffffff;
-  display: flex;
   justify-content: center;
   align-items: center;
   transition: 300ms;
@@ -202,4 +211,9 @@ body{
 
 .precio {
   color: black
+}
+
+.nombre{
+  color: black;
+  font-size: 15px;
 }

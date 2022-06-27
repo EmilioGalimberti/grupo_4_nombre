@@ -25,7 +25,7 @@ window.addEventListener('load',function(){
             event.preventDefault()
             
             let ulErrors = document.querySelector('div.errors ul')
-
+            ulErrors.innerHTML = ''
             for (let index = 0; index < errors.length; index++) {
                 
                 ulErrors.innerHTML += "<li>"+ errors[index] + "</li>"

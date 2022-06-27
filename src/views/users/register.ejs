@@ -20,9 +20,6 @@
 	<%- include('../partials/header') %>
 	
 		<div class="row">
-			<div class="col-12">
-				<h1 class="products-title">Formulario de registro de usuarios</h1>
-			</div>
 		</div>
 		<% if (typeof errores != 'undefined') { %>
 			 <% errores.array().map(err =>{ %>
@@ -70,9 +67,9 @@
 
 	</section>
 	<!-- /todos los productos -->
-
+	<div class="pata">
 	<%- include('../partials/footer') %>
-
+	</div>
 	<script src="/jsValidations/js-front-validation.js"></script>
 </body>	
 </html>
