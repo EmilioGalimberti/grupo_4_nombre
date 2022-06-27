@@ -28,13 +28,13 @@ router.post('/register', uploadFile.single("image"),usersControllers.userCreate)
 
 
 
-router.get('/login', userMidd.acces, webControllers.login);
+router.get('/login', /* userMidd.acces,*/ webControllers.login);
 router.post('/', usersControllers.logueo);
 
  
-router.get('/edit/:id', userMidd.acces, usersControllers.editUser); 
+router.get('/edit/:id',/*  userMidd.acces, */ usersControllers.editUser); 
 router.post('/update', uploadFile.single("image"),usersControllers.update);
 
-router.delete("/delete/:id",userMidd.acces,usersControllers.destroy)
+router.post("/delete/:id",/* userMidd.acces, */usersControllers.destroy)
 
 module.exports = router;

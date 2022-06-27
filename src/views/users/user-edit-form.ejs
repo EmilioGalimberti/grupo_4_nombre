@@ -57,11 +57,11 @@
 					<div class="col-12">
 						<button type="submit" class="buy-now-button">Editar Usuario</button>
 					</div>
-					<form action="/delete<%= userToEdit.id%>?_method=DELETE" method="post">
-						<button type="submit" class="action-button">ELIMINAR</button>
-					</form>
 				</div>
 				
+			</form>
+			<form action="/delete/<%= userToEdit.id%>" method="POST">
+				<button type="submit" class="action-button">ELIMINAR</button>
 			</form>
 		</div>
 

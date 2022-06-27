@@ -68,6 +68,7 @@ const usersControllers = {
 
 		//form edit users
 		editUser:(req,res)=>{
+			
 			let id=req.params.id
 			db.User.findByPk(id)
             .then(userToEdit => {
@@ -94,21 +95,13 @@ const usersControllers = {
 		},
 
 		destroy: (req, res) => {
+			console.log("llego al destroy!")
 			console.log(req.params.id);
-			db.User
-			.findByPk(req.params.id)
+			db.User	.findByPk(req.params.id)
 				// Si el registro existe
 				.then( user => {
 					// Lo borramos
 					db.User.destroy({ where:{ id:req.params.id} });
-					
-					/* // y además borramos la imagen asociada
-					const imagePath = path.resolve(__dirname, '../../public/images/usersData', user.image);
-					if (fs.existsSync(imagePath)) {
-						fs.unlinkSync(imagePath);
-					} */
-	
-					// luego volvemos al listado
 					res.redirect(`/`)
 				})
 				.catch(error => console.log(error));
