@@ -16,6 +16,7 @@ const productsControllers = {
     // show all products
     listProducts:(req, res) =>{
 		let email = session.email;
+        console.log(email)
         db.Product.findAll()
             .then(products => {
                 res.render('adminProducts/listProducts', {products, toThousand, titulos, "numero": 5, email})
@@ -28,13 +29,14 @@ const productsControllers = {
         let id = req.params.id
         db.Product.findByPk(id)
             .then(product => {
-                res.render('adminProducts/productDetail', {product,toThousand})
+                res.render('adminProducts/productDetail', {product,toThousand,email})
             })
     },
 
     //Form create
     formProduct:(req, res) =>{
-        res.render('adminProducts/productsForms',{titulos, "numero":4});
+        let email = session.email;
+        res.render('adminProducts/productsForms',{titulos, "numero":4, email});
     },
 
     // Create Product and storage method
@@ -56,10 +58,11 @@ const productsControllers = {
     
     //form edit
     edit: (req, res) => {
+        let email = session.email;
 		let id = req.params.id
         db.Product.findByPk(id)
             .then(productToEdit => {
-                res.render('adminProducts/product-edit-form', {productToEdit})
+                res.render('adminProducts/product-edit-form', {productToEdit, email})
             })
 		//let productToEdit = products.find(product => product.id == id)
 		//res.render('adminProducts/product-edit-form', {productToEdit})
