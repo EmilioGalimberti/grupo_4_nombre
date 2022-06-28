@@ -18,11 +18,13 @@
 	<%- include('../partials/header') %>
 	<!-- /Header -->
     <main>
-
+		<% if(typeof email !== 'undefined') {%>
 		<a href="/products/create">
 			<button onClick="myFunction()"  id="myBtn" class="action-button">Crear producto</button>
 		</a>
-
+		<% } %>
+		<ul>
+			
 		<div class="container products-wrapper">
 			<div class="row">
 				<div class="col-12">
@@ -49,10 +51,12 @@
 								</article>
 							</a>
 						</section>
+					<% if(typeof email !== 'undefined') {%>
 									<a href="/products/edit/<%= product.id %>" class="action-button">EDITAR PRODUCTO</a> <br> <br>
 									<form action="/products/delete/<%= product.id%>?_method=DELETE" method="post">
 											<button type="submit" class="action-button">ELIMINAR</button>
 									</form>
+					<% } %>
 					</div>
 					<% }) %>
 			</div>
