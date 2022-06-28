@@ -72,6 +72,9 @@ div form{
   transition: ease-in-out, width .35s ease-in-out;
 }
 
+option{
+  background-color: #6249c8;
+}
 
 input.form-input:focus-visible{
 	outline: none;
