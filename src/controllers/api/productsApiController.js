@@ -43,7 +43,7 @@ const productApiController = {
 																	      })
                 									 },        
   				        products: await db.Product.findAll({
-							      attributes: [ 'id', 'name', 'description', 'category']
+							      attributes: [ 'id', 'name', 'price', 'description', 'category']
 							      })  
              }
 

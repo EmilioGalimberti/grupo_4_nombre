@@ -4,7 +4,7 @@ const sequelize = db.sequelize;
 module.exports={
     list: (req, res) => {
         db.User
-        .findAll({attributes: ['id','first_name','email']})
+        .findAll({attributes: ['id','first_name','last_name','email']})
         .then(users => {
             
             res.json({

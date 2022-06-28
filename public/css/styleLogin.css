@@ -125,6 +125,10 @@ div#recordarPass{
 	width: 50%;
   }
 
+  li{
+	color: red
+}
+
 /*Deskopt*/
 @media (min-width: 1024px){
 

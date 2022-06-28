@@ -9,7 +9,7 @@ body {
     align-items: center;
     margin: 0 15% 0 15%;
     border: #6249c8 solid 3px;
-    padding: 0px;
+    padding: 2px;
     border-radius: 10px;
     background-color: #131313;
 }
@@ -49,14 +49,15 @@ body {
     font-size: 20px;
 }
 .agregar{
-    border: white solid 1px;
-    font-size: 20px;
+    border-radius: 15px;
+    font-size: 16px;
     font-weight: bold;
     padding: 5px;
     text-align: center;
     margin-top: 40px;
     color: white;
     background-color: #6249c8;
+    margin-bottom: 5%;
 }
 .agregar:hover{
     color: black;
@@ -64,8 +65,8 @@ body {
 }
 
 .comprar{
-    border: white solid 1px;
-    font-size: 20px;
+    border-radius: 15px;
+    font-size: 16px;
     font-weight: bold;
     padding: 5px;
     text-align: center;
