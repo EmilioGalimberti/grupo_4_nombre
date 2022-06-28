@@ -38,12 +38,14 @@
 						<section class="product-box">
 							<a href="products/detail/<%= product.id %>">
 									<div class="contenedorimagen">
-									<img src="<%= product.image %>" alt="imagen de producto" width="250px" class="imagenes">
+									<img src="<%= product.image %>" alt="imagen de producto" width="250px" height="250px" class="imagenes">
 									</div>
 								<article class="product-box_data">
 									<div class="contenedorpreciodescuento">
 									<h2 class="precio">$<%= toThousand(product.price) %></h2>
+									<% if(product.discount != 0) { %>
 									<span><%= product.discount %> %OFF</span>
+									<%}%>
 									</div>
 									<div>
 									<p class="nombre"><%= product.name %></p>

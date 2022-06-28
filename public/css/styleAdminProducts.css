@@ -14,8 +14,6 @@ body{
 }
 
 
-
-
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
 /*!
  * Bootstrap Grid v4.3.1 (https://getbootstrap.com/)
@@ -146,6 +144,7 @@ body{
 .contenedorimagen{
   border-bottom: #131313 1px solid;
 }
+
 .contenedorpreciodescuento{
   display:flex;
 }

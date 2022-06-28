@@ -28,10 +28,12 @@
             <div class="descripcion">
                 <h1 class="nombre"><%= product.name %></h1>
                 <p class="texto"><%= product.description %> <br> Marca:<%= product.brand %> <br> Talle:<%= product.size %> <br> Color: <%= product.color %> </p>
+                <% if(product.discount != 0) { %>
                 <div class="contenedor2">
                     <h2 class="precio">$<%= toThousand(product.price) %></h2>
 				    <span class="porcentaje"><%= product.discount %> %OFF</span>
                 </div>
+                <%}%>
                 <h2 class="descuento">$<%= toThousand(finalPrice) %></h2>
                 <a href="/products" class="linkcarrito"><p class="agregar">AGREGAR AL CARRITO</p></a>
                 <a href="/carrito" class="linkcarrito"><p class="comprar">COMPRAR AHORA</p></a>
